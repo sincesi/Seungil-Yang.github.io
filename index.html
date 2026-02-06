@@ -4,16 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seungil Yang (양승일) | Academic Homepage</title>
-  <meta name="description" content="Seungil Yang — Ph.D. student at JAIST (Transdisciplinary Sciences). Formal methods, model checking, privacy, re-identification risks, healthcare data." />
+  <meta name="description" content="Seungil Yang — Ph.D. student at JAIST. Formal methods, model checking, privacy, re-identification risk, data security, software engineering." />
+
   <style>
     :root { --fg:#111; --muted:#555; --bg:#fff; --card:#f6f6f6; --line:#e6e6e6; }
     body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Hiragino Sans","Noto Sans JP","Segoe UI",Roboto,Arial,sans-serif; color:var(--fg); background:var(--bg); }
     .wrap { max-width: 980px; margin: 0 auto; padding: 22px 18px 64px; }
 
+    /* Top language tabs */
     .topbar { position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom:1px solid var(--line); z-index: 10; }
     .tabs { max-width: 980px; margin:0 auto; padding: 10px 18px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
     .tabbtns { display:flex; gap:8px; flex-wrap:wrap; }
-    .tabbtn { padding:8px 12px; border:1px solid var(--line); border-radius:999px; background:#fff; cursor:pointer; color:var(--muted); font-size:13px; }
+    .tabbtn {
+      padding:8px 12px; border:1px solid var(--line); border-radius:999px; background:#fff;
+      cursor:pointer; color:var(--muted); font-size:13px;
+    }
     .tabbtn.active { background:#111; color:#fff; border-color:#111; }
     .mini { font-size:13px; color:var(--muted); }
 
@@ -32,6 +37,7 @@
     section { margin-top:26px; }
     h2 { font-size:18px; margin:0 0 10px; }
     h3 { font-size:15px; margin:0 0 8px; color:#222; }
+
     .card { border:1px solid var(--line); border-radius:16px; padding:16px; background:#fff; }
     .item { padding:12px 0; border-top:1px solid var(--line); }
     .item:first-child { border-top:0; padding-top:0; }
@@ -39,16 +45,21 @@
     .small { font-size:14px; color:var(--muted); line-height:1.6; }
 
     .pill { display:inline-block; padding:4px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted); background:#fff; margin:4px 6px 0 0; }
-
     footer { margin-top:34px; color:var(--muted); font-size:13px; line-height:1.6; }
+    a { color:inherit; }
+    code { background:#f3f3f3; padding:2px 6px; border-radius:8px; }
 
+    /* Language pages */
     .langpage { display:none; }
     .langpage.active { display:block; }
-    code { background:#f3f3f3; padding:2px 6px; border-radius:8px; }
+
+    .related { margin-top:10px; font-size:14px; color:var(--muted); line-height:1.6; }
+    .related strong { color:#222; font-weight:600; }
   </style>
 </head>
 
 <body>
+  <!-- Sticky language tabs -->
   <div class="topbar">
     <div class="tabs">
       <div class="mini"><strong>Language</strong></div>
@@ -80,7 +91,8 @@
           </div>
 
           <p class="meta">
-            Ph.D. Student (Transdisciplinary Sciences), Japan Advanced Institute of Science and Technology (JAIST)
+            Affiliation: Japan Advanced Institute of Science and Technology (JAIST)<br/>
+            Graduate School of Advanced Science and Technology
           </p>
 
           <p class="meta">
@@ -92,7 +104,7 @@
         </div>
 
         <div class="btns">
-          <!-- CV 링크를 준비하면 href="#"를 실제 PDF 주소로 교체 -->
+          <!-- TODO: CV PDF 링크로 href="#"를 실제 PDF 주소로 교체 -->
           <a class="btn primary" href="#" target="_blank" rel="noreferrer">Download CV (PDF)</a>
           <a class="btn" href="#contact-ko">Contact</a>
         </div>
@@ -112,7 +124,7 @@
         <h2>Short Bio</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            양승일은 JAIST에서 Transdisciplinary Sciences 박사과정에 재학 중이다.
+            양승일은 Japan Advanced Institute of Science and Technology (JAIST)에서 Transdisciplinary Sciences 박사과정에 재학 중이다.
             형식기법과 모델 체킹을 활용하여 데이터 공개 및 비식별화 과정에서 발생할 수 있는 재식별 위험을 설계 단계에서 분석·검증하는 연구를 수행하고 있다.
           </p>
         </div>
@@ -125,15 +137,17 @@
             <div class="title">Ph.D. (Transdisciplinary Sciences), JAIST</div>
             <div class="small">2023 – Present · Expected graduation: Sep 2026</div>
           </div>
+
           <div class="item">
             <div class="title">M.S. (Transdisciplinary Sciences), JAIST</div>
             <div class="small">2020/04 – 2023/02</div>
           </div>
+
           <div class="item">
             <div class="title">M.Div., Biola University</div>
             <div class="small">
               2012/06 – 2018/05 · La Mirada, CA, USA<br/>
-              Intercultural Studies (Emphasis in Anthropology and Cross-Cultural Education)
+              Intercultural Studies (Emphases: Anthropology &amp; Cross-cultural education)
             </div>
           </div>
         </div>
@@ -144,7 +158,7 @@
         <div class="card">
           <p style="margin:0; line-height:1.75;">
             지도교수: <strong>AOKI, Toshiaki 교수</strong><br/>
-            소속: Transdisciplinary Sciences, Information Science<br/>
+            소속: Transdisciplinary Sciences / Information Science<br/>
             연계: Next-Generation Digital Infrastructure, Research Center for AI and Soft Robots (Research Core)<br/>
             연구실: <strong>青木研究室 (Aoki Laboratory / Laboratory on Formal Methods)</strong><br/>
             <span class="small">연구실 페이지: <a href="https://www.jaist.ac.jp/is/labs/aoki-lab/" target="_blank" rel="noreferrer">JAIST Aoki Lab</a></span>
@@ -152,14 +166,28 @@
         </div>
       </section>
 
+      <!-- Final: 1 paragraph + Related 1 line -->
       <section id="interests-ko">
         <h2>Research Interests</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            본 연구는 형식기법을 활용하여 의료 데이터에서의 개인정보 보호 문제를 체계적으로 모델링하고 검증하는 데 초점을 둡니다.
-            특히 비식별화 및 데이터 공개 정책이 설계 단계에서 어떤 재식별 위험을 내포하는지를 분석합니다.
-            이를 통해 안전한 데이터 활용을 지원하는 검증 가능한 데이터 거버넌스 방법론을 탐구합니다.
+            본 연구는 형식기법(Formal Methods)과 소프트웨어공학을 기반으로,
+            데이터 공개 및 비식별화 과정에서 발생할 수 있는 <strong>보안·프라이버시 위험</strong>을
+            설계 단계에서 <strong>정형적으로 모델링하고 검증</strong>하는 데 초점을 둔다.
+            특히 정보보안 관점에서 <strong>안전하고 신뢰 가능한 소프트웨어 시스템</strong>을 지향하며,
+            의료 데이터를 포함한 데이터·정보 인프라와 인공지능 시스템에서의
+            재식별 위험과 프라이버시–유틸리티 간의 균형 문제를 체계적으로 분석한다.
+            이를 통해 <strong>차세대 디지털 인프라(Next-Generation Digital Infrastructure)</strong>를 뒷받침하는
+            검증 가능한 데이터 거버넌스 및 시스템 설계 방법론을 제시하는 것을 목표로 한다.
           </p>
+          <div class="related">
+            <strong>Related:</strong>
+            Trustworthy and Secure Software Systems /
+            Formal Methods and Software Engineering /
+            Data and Information Infrastructure /
+            Security and Privacy in AI-enabled Systems /
+            Next-Generation Digital Infrastructure
+          </div>
         </div>
       </section>
 
@@ -175,9 +203,8 @@
         <h2>Methodology</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            본 연구에서는 의료 데이터 스키마와 비식별화 정책을 형식적으로 모델링하기 위해 Alloy를 사용합니다.
+            본 연구에서는 데이터 스키마와 비식별화 정책을 형식적으로 모델링하기 위해 Alloy를 사용합니다.
             모델 체킹을 통해 특정 데이터 공개 조합이 논리적으로 재식별 가능성을 허용하는지를 설계 단계에서 검증합니다.
-            이 과정에서 실제 데이터를 사용하지 않고도 개인정보 노출 위험을 체계적으로 분석합니다.
           </p>
         </div>
       </section>
@@ -186,10 +213,12 @@
         <h2>Publications</h2>
         <div class="card">
           <h3>Planned / Under Submission</h3>
+
           <div class="item">
             <div class="title">[Planned] Relational Verification of Identity Disclosure in De-identified Healthcare Data Using Alloy</div>
             <div class="small">ABZ 2026 Workshop paper (planned submission)</div>
           </div>
+
           <div class="item">
             <div class="title">[Under submission] Formal Analysis of Re-identification Risks in Healthcare Data</div>
             <div class="small">Journal of Information Security and Applications (JISA)</div>
@@ -221,7 +250,10 @@
       <header>
         <div>
           <h1>ヤン・スンイル <span style="font-weight:400;">Seungil Yang（양승일）</span></h1>
-          <p class="tagline">形式手法を用いて、データのプライバシー保護と安全なデータ活用を研究しています。</p>
+
+          <p class="tagline">
+            形式手法を用いて、データのプライバシー保護と安全なデータ活用を研究しています。
+          </p>
 
           <div style="margin-top:10px;">
             <span class="pill">情報学</span>
@@ -230,7 +262,11 @@
             <span class="pill">Transdisciplinary Sciences</span>
           </div>
 
-          <p class="meta">JAIST・Transdisciplinary Sciences 博士課程</p>
+          <p class="meta">
+            所属：北陸先端科学技術大学院大学（JAIST）<br/>
+            先端科学技術研究科
+          </p>
+
           <p class="meta">
             Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a> ·
             <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> ·
@@ -259,8 +295,8 @@
         <h2>Short Bio</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            ヤン・スンイルはJAISTのTransdisciplinary Sciences博士課程学生である。
-            形式手法とモデル検査を用いて、データ公開・非識別化に伴う再識別リスクを設計段階で分析・検証する研究に取り組んでいる。
+            ヤン・スンイルは北陸先端科学技術大学院大学（JAIST）の Transdisciplinary Sciences 博士課程学生である。
+            形式手法とモデル検査を用いて、データ公開および非識別化に伴う再識別リスクを設計段階で分析・検証する研究に取り組んでいる。
           </p>
         </div>
       </section>
@@ -272,15 +308,17 @@
             <div class="title">博士（Transdisciplinary Sciences）, JAIST</div>
             <div class="small">2023 – 現在 · 2026年9月 修了予定</div>
           </div>
+
           <div class="item">
             <div class="title">修士（Transdisciplinary Sciences）, JAIST</div>
             <div class="small">2020/04 – 2023/02</div>
           </div>
+
           <div class="item">
             <div class="title">M.Div., Biola University</div>
             <div class="small">
               2012/06 – 2018/05 · La Mirada, CA, USA<br/>
-              Intercultural Studies（Anthropology と Cross-Cultural Education に重点）
+              Intercultural Studies（重点：Anthropology &amp; Cross-cultural education）
             </div>
           </div>
         </div>
@@ -303,9 +341,23 @@
         <h2>Research Interests</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            本研究は、形式手法を用いて医療データにおけるプライバシー保護の課題を体系的にモデル化・検証することに焦点を当てています。
-            とりわけ、非識別化やデータ公開方針が設計段階でどのような再識別リスクを許容し得るかを分析します。
+            本研究は、形式手法（Formal Methods）とソフトウェア工学を基盤として、
+            データ公開および非識別化の過程で生じ得る<strong>セキュリティ・プライバシーリスク</strong>を、
+            設計段階において<strong>形式的にモデル化・検証</strong>することを目的とする。
+            特に、<strong>安全かつ信頼可能なソフトウェアシステム</strong>の実現を重視し、
+            医療データを含むデータ・情報インフラやAIシステムにおける
+            再識別リスクおよびプライバシーと有用性のトレードオフを体系的に分析する。
+            本研究は、<strong>Next-Generation Digital Infrastructure</strong>を支える
+            検証可能なデータガバナンスおよびシステム設計手法の確立に貢献する。
           </p>
+          <div class="related">
+            <strong>Related:</strong>
+            Trustworthy and Secure Software Systems /
+            Formal Methods and Software Engineering /
+            Data and Information Infrastructure /
+            Security and Privacy in AI-enabled Systems /
+            Next-Generation Digital Infrastructure
+          </div>
         </div>
       </section>
 
@@ -321,8 +373,8 @@
         <h2>Methodology</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            医療データのスキーマと非識別化方針を形式的にモデル化するためにAlloyを用います。
-            モデル検査により、データ公開の組み合わせが論理的に再識別を許容し得るかを設計段階で検証します。
+            データスキーマと非識別化方針を形式的にモデル化するためにAlloyを用いる。
+            モデル検査により、データ公開の組み合わせが論理的に再識別を許容し得るかを設計段階で検証する。
           </p>
         </div>
       </section>
@@ -331,10 +383,12 @@
         <h2>Publications</h2>
         <div class="card">
           <h3>Planned / Under Submission</h3>
+
           <div class="item">
             <div class="title">[Planned] Relational Verification of Identity Disclosure in De-identified Healthcare Data Using Alloy</div>
             <div class="small">ABZ 2026 Workshop（投稿予定）</div>
           </div>
+
           <div class="item">
             <div class="title">[Under submission] Formal Analysis of Re-identification Risks in Healthcare Data</div>
             <div class="small">Journal of Information Security and Applications (JISA)</div>
@@ -346,16 +400,14 @@
         <h2>Contact</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a><br/>
-            Links: <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> ·
-            <a href="#" target="_blank" rel="noreferrer">ORCID</a> ·
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+            Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a>
           </p>
         </div>
       </section>
 
       <footer>
-        © <span class="year"></span> Seungil Yang · Last updated: <span class="date"></span>
+        © <span class="year"></span> Seungil Yang · Last updated: <span class="date"></span><br/>
+        <span class="small">Design-time verification for safer data-driven society.</span>
       </footer>
     </div>
 
@@ -364,7 +416,10 @@
       <header>
         <div>
           <h1>Seungil Yang <span style="font-weight:400;">(양승일)</span></h1>
-          <p class="tagline">I use formal methods to study privacy protection and safe utilization of data.</p>
+
+          <p class="tagline">
+            I use formal methods to study privacy protection and safe utilization of data.
+          </p>
 
           <div style="margin-top:10px;">
             <span class="pill">Information Science</span>
@@ -373,7 +428,11 @@
             <span class="pill">Transdisciplinary Sciences</span>
           </div>
 
-          <p class="meta">Ph.D. Student (Transdisciplinary Sciences), Japan Advanced Institute of Science and Technology (JAIST)</p>
+          <p class="meta">
+            Affiliation: Japan Advanced Institute of Science and Technology (JAIST)<br/>
+            Graduate School of Advanced Science and Technology
+          </p>
+
           <p class="meta">
             Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a> ·
             <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> ·
@@ -402,7 +461,7 @@
         <h2>Short Bio</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            Seungil Yang is a Ph.D. student in Transdisciplinary Sciences at JAIST.
+            Seungil Yang is a Ph.D. student in Transdisciplinary Sciences at the Japan Advanced Institute of Science and Technology (JAIST).
             His research focuses on analyzing and verifying re-identification risks in data disclosure and de-identification processes using formal methods and model checking.
           </p>
         </div>
@@ -415,15 +474,17 @@
             <div class="title">Ph.D. (Transdisciplinary Sciences), JAIST</div>
             <div class="small">2023 – Present · Expected graduation: Sep 2026</div>
           </div>
+
           <div class="item">
             <div class="title">M.S. (Transdisciplinary Sciences), JAIST</div>
             <div class="small">Apr 2020 – Feb 2023</div>
           </div>
+
           <div class="item">
             <div class="title">M.Div., Biola University</div>
             <div class="small">
               Jun 2012 – May 2018 · La Mirada, CA, USA<br/>
-              Intercultural Studies (Emphasis in Anthropology and Cross-Cultural Education)
+              Intercultural Studies (Emphases: Anthropology &amp; Cross-cultural education)
             </div>
           </div>
         </div>
@@ -446,9 +507,23 @@
         <h2>Research Interests</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            My research focuses on systematically modeling and verifying privacy protection in healthcare data using formal methods.
-            In particular, I analyze how de-identification and data release policies may admit re-identification risks at the design stage.
+            My research is grounded in formal methods and software engineering, focusing on the
+            formal modeling and verification of <strong>security and privacy risks</strong> arising in data disclosure
+            and de-identification processes at the design stage.
+            With an emphasis on <strong>trustworthy and secure software systems</strong>, I systematically analyze
+            re-identification risks and privacy–utility trade-offs in data and information infrastructures,
+            including healthcare data and AI-enabled systems.
+            Through this work, I aim to contribute verifiable data governance and system design methodologies
+            that support the development of <strong>Next-Generation Digital Infrastructure</strong>.
           </p>
+          <div class="related">
+            <strong>Related:</strong>
+            Trustworthy and Secure Software Systems /
+            Formal Methods and Software Engineering /
+            Data and Information Infrastructure /
+            Security and Privacy in AI-enabled Systems /
+            Next-Generation Digital Infrastructure
+          </div>
         </div>
       </section>
 
@@ -464,7 +539,7 @@
         <h2>Methodology</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            I use Alloy to formally model healthcare data schemas and de-identification policies.
+            I use Alloy to formally model data schemas and de-identification policies.
             Model checking is applied to verify, at the design stage, whether specific data release combinations logically admit re-identification.
           </p>
         </div>
@@ -474,10 +549,12 @@
         <h2>Publications</h2>
         <div class="card">
           <h3>Planned / Under Submission</h3>
+
           <div class="item">
             <div class="title">[Planned] Relational Verification of Identity Disclosure in De-identified Healthcare Data Using Alloy</div>
             <div class="small">ABZ 2026 Workshop paper (planned submission)</div>
           </div>
+
           <div class="item">
             <div class="title">[Under submission] Formal Analysis of Re-identification Risks in Healthcare Data</div>
             <div class="small">Journal of Information Security and Applications (JISA)</div>
@@ -489,26 +566,26 @@
         <h2>Contact</h2>
         <div class="card">
           <p style="margin:0; line-height:1.75;">
-            Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a><br/>
-            Links: <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> ·
-            <a href="#" target="_blank" rel="noreferrer">ORCID</a> ·
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+            Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a>
           </p>
         </div>
       </section>
 
       <footer>
-        © <span class="year"></span> Seungil Yang · Last updated: <span class="date"></span>
+        © <span class="year"></span> Seungil Yang · Last updated: <span class="date"></span><br/>
+        <span class="small">Design-time verification for safer data-driven society.</span>
       </footer>
     </div>
 
   </div>
 
   <script>
+    // footer date
     const now = new Date();
     document.querySelectorAll('.year').forEach(el => el.textContent = now.getFullYear());
     document.querySelectorAll('.date').forEach(el => el.textContent = now.toISOString().slice(0,10));
 
+    // Language tab switching (with URL + localStorage)
     const tabBtns = Array.from(document.querySelectorAll('.tabbtn'));
     const pages = Array.from(document.querySelectorAll('.langpage'));
 
