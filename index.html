@@ -620,25 +620,25 @@
       const url = new URL(window.location.href);
       url.searchParams.set('lang', lang);
       window.history.replaceState({}, '', url.toString());
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
+		window.scrollTo({ top: 0, behavior: 'auto' });    
+	}
 
     tabBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
 
-   (function initLang(){
+  (function initLang() {
   const url = new URL(window.location.href);
   const q = url.searchParams.get('lang');
 
-  // 1) URL 파라미터가 있으면 그걸 최우선
+  // 1) URL 파라미터 우선
   let lang = q;
 
-  // 2) 없으면 이전에 저장한 언어(localStorage) 사용
+  // 2) 없으면 localStorage
   if (!lang) {
-    try { lang = localStorage.getItem('preferredLang'); } catch(e) {}
+    try { lang = localStorage.getItem('preferredLang'); } catch (e) {}
   }
 
-  // 3) 그래도 없거나 이상하면 기본값: 영어(en)
-  if (!['ko','ja','en'].includes(lang)) lang = 'en';
+  // 3) 기본값: 영어
+  if (!['ko', 'ja', 'en'].includes(lang)) lang = 'en';
 
   setLang(lang);
 })();
