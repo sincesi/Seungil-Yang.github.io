@@ -8,1121 +8,142 @@
       content="Seungil Yang | Ph.D. researcher at JAIST working on formal methods, model checking, privacy, and re-identification risk in data-driven systems." />
   <meta name="keywords" content="Seungil Yang, 양승일, 양승일 박사, 양승일 JAIST, JAIST 양승일, 양승일 교수, Privacy, Formal Methods, Alloy, Software Engineering, Researcher" />
   <meta name="google-site-verification" content="58qheJblPq9CSIj_spryujOr0rJkt9UpDXvmsQcGeiA" />
+  <meta property="og:title" content="Seungil Yang | Formal Verification of Privacy" />
+  <meta property="og:description" content="Ph.D. researcher at JAIST working on formal methods, privacy, model checking, and re-identification risk in data and AI systems." />
+  <meta property="og:type" content="website" />
   <style>
-    :root {
-      --bg: #0b1020;
-      --panel: rgba(15, 23, 42, 0.78);
-      --panel-strong: #111827;
-      --text: #e5eefb;
-      --muted: #a8b3c7;
-      --line: rgba(148, 163, 184, 0.18);
-      --accent: #7dd3fc;
-      --accent-2: #c4b5fd;
-      --pill: rgba(125, 211, 252, 0.12);
-      --shadow: 0 20px 50px rgba(2, 6, 23, 0.45);
-      --radius: 22px;
-      --max: 1120px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(125, 211, 252, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(196, 181, 253, 0.14), transparent 24%),
-        linear-gradient(180deg, #060a15 0%, #0b1020 100%);
-      line-height: 1.65;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(16px);
-      background: rgba(6, 10, 21, 0.72);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .site-header .inner {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      min-height: 72px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand strong {
-      font-size: 0.98rem;
-      letter-spacing: 0.02em;
-    }
-
-    .brand span {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
-    .main-nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .main-nav a {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .main-nav a:hover,
-    .main-nav a.active {
-      color: var(--text);
-    }
-
-    .lang-switch {
-      display: inline-flex;
-      padding: 4px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.03);
-      gap: 4px;
-    }
-
-    .lang-switch button {
-      border: 0;
-      background: transparent;
-      color: var(--muted);
-      padding: 8px 12px;
-      border-radius: 999px;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .lang-switch button.active {
-      background: rgba(255,255,255,0.08);
-      color: var(--text);
-    }
-
-    .langpage {
-      display: none;
-    }
-
-    .langpage.active {
-      display: block;
-    }
-
-    .hero {
-      padding: 72px 0 36px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 0.9fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .hero-card,
-    .panel,
-    .timeline-item,
-    .pub-item,
-    .focus-item {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 34px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -60px -60px auto;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(125,211,252,0.22), transparent 70%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      font-size: 0.86rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2.15rem, 5vw, 3.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-    }
-
-    .hero h1 span {
-      display: block;
-      color: var(--muted);
-      font-weight: 500;
-      font-size: clamp(1rem, 2vw, 1.32rem);
-      margin-top: 10px;
-      letter-spacing: 0;
-    }
-
-    .hero p.lead {
-      margin: 18px 0 0;
-      color: var(--text);
-      font-size: 1.08rem;
-      max-width: 62ch;
-    }
-
-    .hero p.sublead {
-      margin: 14px 0 0;
-      color: var(--muted);
-      max-width: 64ch;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: var(--pill);
-      color: #d9f6ff;
-      border: 1px solid rgba(125, 211, 252, 0.14);
-      font-size: 0.92rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      color: var(--text);
-      font-weight: 600;
-      transition: transform .16s ease, background .16s ease, border-color .16s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(255,255,255,0.18);
-    }
-
-    .btn.primary {
-      background: linear-gradient(135deg, rgba(125,211,252,0.22), rgba(196,181,253,0.18));
-      border-color: rgba(125,211,252,0.28);
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 18px;
-    }
-
-    .panel {
-      padding: 22px;
-    }
-
-    .panel h3 {
-      margin: 0 0 12px;
-      font-size: 1rem;
-    }
-
-    .meta-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .meta-item {
-      display: grid;
-      gap: 4px;
-    }
-
-    .meta-item .label {
-      color: var(--muted);
-      font-size: 0.84rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .meta-item .value {
-      font-size: 0.97rem;
-    }
-
-    .link-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    .link-chip {
-      padding: 9px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      background: rgba(255,255,255,0.03);
-      font-size: 0.92rem;
-    }
-
-    .link-chip:hover { color: var(--text); }
-
-    main {
-      padding-bottom: 56px;
-    }
-
-    section.content-section {
-      padding: 18px 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(1.35rem, 2vw, 1.8rem);
-      letter-spacing: -0.03em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 58ch;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 22px;
-    }
-
-    .content-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-    }
-
-    .content-card p:first-child { margin-top: 0; }
-    .content-card p:last-child { margin-bottom: 0; }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .focus-item {
-      padding: 18px;
-      min-height: 140px;
-    }
-
-    .focus-item h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-    }
-
-    .focus-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 14px;
-    }
-
-    .timeline-item,
-    .pub-item {
-      padding: 18px 20px;
-    }
-
-    .timeline-item h3,
-    .pub-item h3 {
-      margin: 0;
-      font-size: 1rem;
-    }
-
-    .timeline-item .small,
-    .pub-item .small {
-      color: var(--muted);
-      margin-top: 6px;
-      font-size: 0.94rem;
-    }
-
-    .thesis-box {
-      border-left: 3px solid var(--accent);
-      padding-left: 16px;
-      margin-top: 8px;
-    }
-
-    .footer {
-      padding: 34px 0 56px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-
-      .site-header {
-        position: static;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .site-header .inner {
-        padding: 12px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .main-nav {
-        gap: 12px;
-      }
-
-      .hero {
-        padding-top: 36px;
-      }
-
-      .hero-card,
-      .panel,
-      .content-card {
-        padding: 20px;
-      }
-
-      .focus-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    :root { --bg:#0b1020; --panel:rgba(15,23,42,.78); --text:#e5eefb; --muted:#a8b3c7; --line:rgba(148,163,184,.18); --accent:#7dd3fc; --pill:rgba(125,211,252,.12); --shadow:0 20px 50px rgba(2,6,23,.45); --radius:22px; --max:1120px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:linear-gradient(180deg,#060a15 0%,#0b1020 100%);line-height:1.7}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(calc(100% - 32px),var(--max));margin:0 auto}
+    .site-header{position:sticky;top:0;z-index:30;background:rgba(6,10,21,.74);border-bottom:1px solid var(--line)}
+    .inner{width:min(calc(100% - 32px),var(--max));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+    .brand strong{display:block;font-size:.98rem}
+    .brand span{color:var(--muted);font-size:.86rem}
+    .main-nav{display:flex;gap:18px}
+    .main-nav a{color:var(--muted)}
+    .main-nav a:hover{color:var(--text)}
+    .lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px}
+    .lang-switch button{border:0;background:transparent;color:var(--muted);padding:8px 12px;cursor:pointer}
+    .lang-switch .active{color:#fff}
+    .langpage{display:none}
+    .langpage.active{display:block}
+    .hero{padding:60px 0}
+    .hero-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+    .pill{background:var(--pill);padding:6px 12px;border-radius:999px;margin-right:6px}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner">
-      <div class="brand">
-        <strong>Seungil Yang</strong>
-        <span>Formal Verification · Privacy · AI Systems</span>
-      </div>
+<header class="site-header">
+  <div class="inner">
+    <div class="brand">
+      <strong>Seungil Yang</strong>
+      <span>Formal Verification · Privacy · AI</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#about-en">About</a>
+      <a href="#research-en">Research</a>
+      <a href="#publications-en">Publications</a>
+      <a href="#contact-en">Contact</a>
+    </nav>
+    <div class="lang-switch">
+      <button class="tabbtn active" data-lang="en">EN</button>
+      <button class="tabbtn" data-lang="ko">KO</button>
+      <button class="tabbtn" data-lang="ja">JA</button>
+    </div>
+  </div>
+</header>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#about-en">About</a>
-        <a href="#research-en">Research</a>
-        <a href="#education-en">Education</a>
-        <a href="#publications-en">Publications</a>
-        <a href="#contact-en">Contact</a>
-      </nav>
-
-      <div class="lang-switch" aria-label="Language switcher">
-        <button class="tabbtn active" data-lang="en" type="button">EN</button>
-        <button class="tabbtn" data-lang="ko" type="button">KO</button>
-        <button class="tabbtn" data-lang="ja" type="button">JA</button>
+<main>
+<!-- ========================= ENGLISH ========================= -->
+<div class="langpage active" id="page-en" data-langpage="en">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Seungil Yang</h1>
+        <p>Formal verification of privacy and identity disclosure in data and AI systems.</p>
+        <p>
+          <span class="pill">Formal Methods</span>
+          <span class="pill">Privacy</span>
+          <span class="pill">LLM / RAG</span>
+        </p>
+        <p>
+          <a href="mailto:s2360003@jaist.ac.jp">Email</a> ·
+          <a href="https://orcid.org/my-orcid?orcid=0009-0003-8389-2154" target="_blank">ORCID</a>
+        </p>
       </div>
     </div>
-  </header>
+  </section>
+</div>
 
-  <main>
-    <!-- ========================= ENGLISH ========================= -->
-    <div class="langpage active" id="page-en" data-langpage="en">
-      <section class="hero">
-        <div class="container hero-grid">
-          <article class="hero-card">
-            <div class="eyebrow">Ph.D. Candidate at JAIST</div>
-            <h1>
-              Seungil Yang
-              <span>Formal verification of privacy and identity disclosure in data and AI systems</span>
-            </h1>
-            <p class="lead">
-              I study how privacy leakage and re-identification risks can be modeled, explained, and verified before deployment, using relational logic, model checking, and system-level reasoning.
-            </p>
-            <p class="sublead">
-              My current work frames identity disclosure as a relational reachability problem and extends design-time privacy verification toward LLM and RAG systems.
-            </p>
-
-            <div class="pill-row">
-              <span class="pill">Formal Methods</span>
-              <span class="pill">Privacy &amp; Security</span>
-              <span class="pill">LLM / RAG Systems</span>
-              <span class="pill">Model Checking</span>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn primary" href="#publications-en">View Publications</a>
-              <a class="btn" href="#contact-en">Contact</a>
-              <a class="btn" href="#">Download CV</a>
-            </div>
-          </article>
-
-          <div class="hero-side">
-            <aside class="panel">
-              <h3>Current Position</h3>
-              <div class="meta-list">
-                <div class="meta-item">
-                  <div class="label">Affiliation</div>
-                  <div class="value">Japan Advanced Institute of Science and Technology (JAIST)</div>
-                </div>
-                <div class="meta-item">
-                  <div class="label">Graduate School</div>
-                  <div class="value">Graduate School of Advanced Science and Technology</div>
-                </div>
-                <div class="meta-item">
-                  <div class="label">Advisor</div>
-                  <div class="value">Prof. Toshiaki Aoki</div>
-                </div>
-              </div>
-            </aside>
-
-            <aside class="panel">
-              <h3>Profiles</h3>
-              <div class="link-list">
-                <a class="link-chip" href="mailto:since1984si@gmail.com">Email</a>
-                <a class="link-chip" href="#" target="_blank" rel="noreferrer">Google Scholar</a>
-                <a class="link-chip" href="#" target="_blank" rel="noreferrer">ORCID</a>
-                <a class="link-chip" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </aside>
-
-            <aside class="panel">
-              <h3>Research Statement</h3>
-              <p style="margin:0;color:var(--muted)">
-                Privacy is not just about masking data. It is about preventing identifiable states from becoming reachable through transformation, inference, retrieval, and system interaction.
-              </p>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" id="about-en">
-        <div class="container two-col">
-          <div class="content-card">
-            <div class="section-head">
-              <h2>About</h2>
-            </div>
-            <p>
-              I am a Ph.D. candidate in Transdisciplinary Sciences at JAIST. My research focuses on the formal modeling and verification of identity disclosure, privacy leakage, and re-identification risks in data and AI systems.
-            </p>
-            <p>
-              I develop verification frameworks that analyze whether a given data release, de-identification policy, or system behavior can logically lead to privacy disclosure. My work aims to bridge empirical privacy evaluation and formal assurance.
-            </p>
-          </div>
-
-          <div class="content-card">
-            <div class="section-head">
-              <h2>Research Focus</h2>
-            </div>
-            <div class="focus-grid">
-              <div class="focus-item">
-                <h3>Privacy Verification</h3>
-                <p>Formal analysis of disclosure and re-identification risks at design time.</p>
-              </div>
-              <div class="focus-item">
-                <h3>Relational Reachability</h3>
-                <p>Modeling privacy leakage as reachability through transformations and attacker inference.</p>
-              </div>
-              <div class="focus-item">
-                <h3>Healthcare Data</h3>
-                <p>Studying re-identification risks in sensitive healthcare and structured data settings.</p>
-              </div>
-              <div class="focus-item">
-                <h3>LLM / RAG Security</h3>
-                <p>Extending formal privacy reasoning to retrieval, generation, memory, and contextual leakage.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" id="research-en">
-        <div class="container two-col">
-          <div class="content-card">
-            <div class="section-head">
-              <h2>Research Interests</h2>
-            </div>
-            <p>
-              My research aims to establish a formal foundation for privacy and security in data-driven systems. I model identity disclosure as a relational reachability problem, where privacy is defined as the inability to reach identifiable states through data transformations and inference processes.
-            </p>
-            <p>
-              This perspective enables design-time verification of privacy risks and provides a rigorous alternative to purely heuristic or statistical approaches. I am particularly interested in connecting formal verification with privacy benchmarking and auditing in LLM and RAG systems.
-            </p>
-          </div>
-
-          <div class="content-card">
-            <div class="section-head">
-              <h2>Methodology</h2>
-            </div>
-            <p>
-              I use Alloy and relational logic to formally model data transformations, attacker assumptions, and system interactions. By composing de-identification transformations with re-identification relations, I verify whether privacy leakage is logically reachable.
-            </p>
-            <div class="thesis-box">
-              <strong>Working thesis direction</strong><br/>
-              Relational Verification of Identity Disclosure in Data and AI Systems
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" id="education-en">
-        <div class="container">
-          <div class="section-head">
-            <h2>Education</h2>
-            <p>Academic background across formal methods, information science, and intercultural studies.</p>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-              <div class="small">Mar 2023 – Present · Expected Sep 2026 · Transdisciplinary Sciences / Information Science</div>
-            </div>
-            <div class="timeline-item">
-              <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-              <div class="small">Apr 2020 – Feb 2023 · Transdisciplinary Sciences / Information Science</div>
-            </div>
-            <div class="timeline-item">
-              <h3>M.Div. — Biola University</h3>
-              <div class="small">Jun 2012 – May 2018 · La Mirada, California, USA · Intercultural Studies</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" id="publications-en">
-        <div class="container">
-          <div class="section-head">
-            <h2>Selected Publications</h2>
-            <p>Current work on formal verification of privacy disclosure and re-identification risk.</p>
-          </div>
-          <div class="timeline">
-            <div class="pub-item">
-              <h3>Relational Verification of Identity Disclosure Using Alloy</h3>
-              <div class="small">ABZ 2026 — International Conference on Rigorous State-Based Methods (Springer LNCS)</div>
-            </div>
-            <div class="pub-item">
-              <h3>Formal Analysis of Re-identification Risks in Healthcare Data</h3>
-              <div class="small">Planned submission to Journal of Information Security and Applications (JISA)</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" id="contact-en">
-        <div class="container two-col">
-          <div class="content-card">
-            <div class="section-head">
-              <h2>Contact</h2>
-            </div>
-            <p>
-              Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a>
-            </p>
-            <p>
-              I am interested in postdoctoral opportunities in formal methods, privacy, AI security, and LLM/RAG systems.
-            </p>
-          </div>
-
-          <div class="content-card">
-            <div class="section-head">
-              <h2>Advisor / Lab</h2>
-            </div>
-            <p>
-              <strong>Prof. Toshiaki Aoki</strong><br/>
-              Aoki Laboratory (Formal Methods)<br/>
-              <a href="https://www.jaist.ac.jp/is/labs/aoki-lab/" target="_blank" rel="noreferrer">JAIST Aoki Lab</a>
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
-  
 <!-- ========================= KOREAN ========================= -->
 <div class="langpage" id="page-ko" data-langpage="ko">
-
-  <header>
-    <div>
-      <h1>양승일 <span style="font-weight:400;">Seungil Yang</span></h1>
-
-      <p class="tagline">
-        데이터 및 AI 시스템에서의 개인정보 유출을 형식적으로 검증하는 연구를 수행합니다.
-      </p>
-
-      <div style="margin-top:10px;">
-        <span class="pill">형식기법 (Formal Methods)</span>
-        <span class="pill">프라이버시 & 보안</span>
-        <span class="pill">LLM / RAG 시스템</span>
-        <span class="pill">모델 체킹</span>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>양승일</h1>
+        <p>데이터 및 AI 시스템에서 개인정보 유출과 재식별 위험을 형식적으로 검증하는 연구를 수행하는 것입니다.</p>
+        <p>
+          <span class="pill">형식기법</span>
+          <span class="pill">프라이버시</span>
+          <span class="pill">LLM / RAG</span>
+        </p>
+        <p>
+          <a href="mailto:s2360003@jaist.ac.jp">이메일</a> ·
+          <a href="https://orcid.org/my-orcid?orcid=0009-0003-8389-2154" target="_blank">ORCID</a>
+        </p>
       </div>
-
-      <p class="meta">
-        Affiliation: Japan Advanced Institute of Science and Technology (JAIST)<br/>
-        Graduate School of Advanced Science and Technology
-      </p>
-
-      <p class="meta">
-        Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a> ·
-        <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> ·
-        <a href="#" target="_blank" rel="noreferrer">ORCID</a> ·
-        <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-      </p>
-    </div>
-
-    <div class="btns">
-      <a class="btn primary" href="#" target="_blank" rel="noreferrer">Download CV (PDF)</a>
-      <a class="btn" href="#contact-ko">Contact</a>
-    </div>
-
-    <nav>
-      <a href="#bio-ko">Bio</a>
-      <a href="#education-ko">Education</a>
-      <a href="#advisor-ko">Advisor/Lab</a>
-      <a href="#interests-ko">Research Interests</a>
-      <a href="#thesis-ko">Thesis</a>
-      <a href="#methodology-ko">Methodology</a>
-      <a href="#publications-ko">Publications</a>
-    </nav>
-  </header>
-
-  <section id="bio-ko">
-    <h2>Short Bio</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        양승일은 일본 JAIST(Japan Advanced Institute of Science and Technology)에서 융합과학 박사과정에 재학 중이며,
-        데이터 및 AI 시스템에서 발생하는 <strong>개인정보 유출 및 재식별 위험</strong>을
-        형식적으로 모델링하고 검증하는 연구를 수행하고 있다.
-        특히 프라이버시를 <strong>관계적 도달 가능성(reachability) 문제</strong>로 정의하여,
-        데이터 공개 또는 시스템 동작이 개인 식별로 이어질 수 있는지를 설계 단계에서 분석하는 프레임워크를 제안하고 있다.
-      </p>
     </div>
   </section>
 
   <section id="education-ko">
-    <h2>Education / 학력</h2>
-    <div class="card">
-      <div class="item">
-        <div class="title">박사 (Ph.D.) — Japan Advanced Institute of Science and Technology (JAIST)</div>
-        <div class="small">
-          2023/03 – Present · Expected Sep 2026<br/>
-          Transdisciplinary Sciences / Information Science
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">석사 (M.S.) — Japan Advanced Institute of Science and Technology (JAIST)</div>
-        <div class="small">
-          2020/04 – 2023/02<br/>
-          Transdisciplinary Sciences / Information Science
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">석사 (M.Div.) — Biola University</div>
-        <div class="small">
-          2012/06 – 2018/05 · La Mirada, CA, USA<br/>
-          Intercultural Studies (인류학 및 문화 간 교육)
-        </div>
-      </div>
+    <div class="container">
+      <h2>학력</h2>
+      <p>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</p>
+      <p>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</p>
+      <p>M.Div. — Biola University</p>
     </div>
   </section>
 
   <section id="advisor-ko">
-    <h2>Advisor / Lab</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        지도교수: <strong>青木 敏昭 (Toshiaki Aoki) 교수</strong><br/>
-        연구실: <strong>Aoki Laboratory (형식기법 연구실)</strong><br/>
-        연구 분야: 형식기법, 소프트웨어 검증, 시스템 설계<br/>
-        <span class="small">
-          연구실 페이지:
-          <a href="https://www.jaist.ac.jp/is/labs/aoki-lab/" target="_blank" rel="noreferrer">
-            JAIST Aoki Lab
-          </a>
-        </span>
-      </p>
+    <div class="container">
+      <h2>지도교수 / 연구실</h2>
+      <p>아오키 토시아키 교수 (Toshiaki Aoki)</p>
     </div>
   </section>
-
-  <section id="interests-ko">
-    <h2>Research Interests</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        본 연구는 <strong>데이터 및 AI 시스템에서의 프라이버시와 보안</strong>에 대한 형식적 기반을 확립하는 것을 목표로 한다.
-        특히 개인정보 유출 문제를 <strong>관계적 도달 가능성(relational reachability)</strong>으로 모델링하여,
-        데이터 변환 및 추론 과정 속에서 개인 식별 상태에 도달할 수 있는지를 검증한다.
-        이를 통해 기존의 경험적 또는 통계적 접근을 넘어,
-        <strong>설계 단계에서 프라이버시 위험을 검증할 수 있는 방법론</strong>을 제시한다.
-      </p>
-
-      <p style="margin-top:12px; line-height:1.75;">
-        또한 이러한 프레임워크를 <strong>LLM 및 RAG 시스템</strong>으로 확장하여,
-        검색, 생성, 문맥 추론 과정에서 발생하는 복합적인 개인정보 유출 문제를 분석하고,
-        <strong>형식 검증, 프라이버시 벤치마크, 시스템 감사(audit)</strong>를 연결하는 연구를 수행하고 있다.
-      </p>
-
-      <div class="related">
-        <strong>Keywords:</strong>
-        형식기법 / 프라이버시 검증 / 재식별 위험 /
-        LLM 보안 / RAG 시스템 / 모델 체킹 /
-        신뢰 가능한 AI / 데이터 거버넌스
-      </div>
-    </div>
-  </section>
-
-  <section id="thesis-ko">
-    <h2>PhD Thesis (Working Title)</h2>
-    <div class="card">
-      <p style="margin:0;">
-        <strong>
-          데이터 및 AI 시스템에서의 개인정보 유출에 대한 관계적 검증 프레임워크
-        </strong>
-      </p>
-      <p class="small" style="margin:8px 0 0;">* Working title (가제)</p>
-    </div>
-  </section>
-
-  <section id="methodology-ko">
-    <h2>Methodology</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        본 연구에서는 Alloy와 관계 논리를 활용하여 데이터 변환 과정과 공격자의 추론 관계를 형식적으로 모델링한다.
-        비식별화 과정과 재식별 관계를 결합하여,
-        특정 데이터 공개 또는 시스템 동작이 개인정보 유출로 이어질 수 있는지를 검증한다.
-        이를 통해 데이터 공개 이전 또는 시스템 설계 단계에서
-        <strong>프라이버시 위험을 사전에 검증</strong>할 수 있는 방법을 제시한다.
-      </p>
-    </div>
-  </section>
-
-  <section id="publications-ko">
-    <h2>Publications</h2>
-    <div class="card">
-      <h3>Accepted</h3>
-
-      <div class="item">
-        <div class="title">
-          Relational Verification of Identity Disclosure Using Alloy
-        </div>
-        <div class="small">
-          ABZ 2026 — International Conference on Rigorous State-Based Methods (Springer LNCS)
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">
-          Formal Analysis of Re-identification Risks in Healthcare Data
-        </div>
-        <div class="small">
-          (Planned) Journal of Information Security and Applications (JISA)
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-ko">
-    <h2>Contact</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a>
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    © <span class="year"></span> Seungil Yang · Last updated: <span class="date"></span><br/>
-    <span class="small">
-      프라이버시는 단순한 데이터 보호가 아니라, 도달 가능성을 차단하는 것이다.
-    </span>
-  </footer>
 </div>
 
 <!-- ========================= JAPANESE ========================= -->
 <div class="langpage" id="page-ja" data-langpage="ja">
-  <header>
-    <div>
-      <h1>ヤン・スンイル <span style="font-weight:400;">梁 承一 (Seungil Yang)</span></h1>
-
-      <p class="tagline">
-        データおよびAIシステムにおけるプライバシー漏えいを形式的に検証する研究を行っています。
-      </p>
-
-      <div style="margin-top:10px;">
-        <span class="pill">形式手法 (Formal Methods)</span>
-        <span class="pill">プライバシー & セキュリティ</span>
-        <span class="pill">LLM / RAG システム</span>
-        <span class="pill">モデル検査</span>
-      </div>
-
-      <p class="meta">
-        所属：北陸先端科学技術大学院大学（JAIST）<br/>
-        先端科学技術研究科
-      </p>
-
-      <p class="meta">
-        Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a> ·
-        <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> ·
-        <a href="#" target="_blank" rel="noreferrer">ORCID</a> ·
-        <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-      </p>
-    </div>
-
-    <div class="btns">
-      <a class="btn primary" href="#" target="_blank" rel="noreferrer">CV（PDF）</a>
-      <a class="btn" href="#contact-ja">Contact</a>
-    </div>
-
-    <nav>
-      <a href="#bio-ja">Bio</a>
-      <a href="#education-ja">Education</a>
-      <a href="#advisor-ja">Advisor/Lab</a>
-      <a href="#interests-ja">Research Interests</a>
-      <a href="#thesis-ja">Thesis</a>
-      <a href="#methodology-ja">Methodology</a>
-      <a href="#publications-ja">Publications</a>
-    </nav>
-  </header>
-
-  <section id="bio-ja">
-    <h2>Short Bio</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        ヤン・スンイルは、北陸先端科学技術大学院大学（JAIST）先端科学技術研究科の博士後期課程に在籍している。
-        主な研究テーマは、データおよびAIシステムにおける<strong>個人情報漏えいと再識別リスク</strong>の形式的モデリングと検証である。
-        特に、プライバシー問題を<strong>関係的到達可能性（reachability）の問題</strong>として捉え、
-        データ公開やシステムの振る舞いが個人識別につながるかどうかを設計段階で分析する枠組みを提案している。
-      </p>
-    </div>
-  </section>
-
-  <section id="education-ja">
-    <h2>Education / 学歴</h2>
-    <div class="card">
-      <div class="item">
-        <div class="title">博士（Ph.D.）— 北陸先端科学技術大学院大学（JAIST）</div>
-        <div class="small">
-          2023/03 – 現在 · 2026年9月 修了予定<br/>
-          Transdisciplinary Sciences / Information Science
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">修士（M.S.）— 北陸先端科学技術大学院大学（JAIST）</div>
-        <div class="small">
-          2020/04 – 2023/02<br/>
-          Transdisciplinary Sciences / Information Science
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">修士（M.Div.）— Biola University</div>
-        <div class="small">
-          2012/06 – 2018/05 · La Mirada, CA, USA<br/>
-          異文化研究（文化人類学・異文化教育）
-        </div>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>ヤン・スンイル</h1>
+        <p>データおよびAIシステムにおけるプライバシー漏えいと再識別リスクを形式的に検証する研究を行っています。</p>
+        <p>
+          <span class="pill">形式手法</span>
+          <span class="pill">プライバシー</span>
+          <span class="pill">LLM / RAG</span>
+        </p>
+        <p>
+          <a href="mailto:s2360003@jaist.ac.jp">メール</a> ·
+          <a href="https://orcid.org/my-orcid?orcid=0009-0003-8389-2154" target="_blank">ORCID</a>
+        </p>
       </div>
     </div>
   </section>
-
-  <section id="advisor-ja">
-    <h2>Advisor / Lab</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        指導教員：<strong>青木 敏昭 教授（Toshiaki Aoki）</strong><br/>
-        研究室：<strong>Aoki Laboratory（形式手法研究室）</strong><br/>
-        研究分野：形式手法、ソフトウェア検証、システム設計<br/>
-        <span class="small">
-          研究室ページ：
-          <a href="https://www.jaist.ac.jp/is/labs/aoki-lab/" target="_blank" rel="noreferrer">
-            JAIST Aoki Lab
-          </a>
-        </span>
-      </p>
-    </div>
-  </section>
-
-  <section id="interests-ja">
-    <h2>Research Interests</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        本研究は、<strong>データおよびAIシステムにおけるプライバシーとセキュリティ</strong>のための形式的基盤を確立することを目的としている。
-        特に、個人情報漏えいを<strong>関係的到達可能性（relational reachability）</strong>としてモデル化し、
-        データ変換および推論過程を通じて個人識別可能な状態に到達し得るかどうかを検証する。
-        これにより、従来の経験的・統計的なアプローチを超えて、
-        <strong>設計段階でプライバシーリスクを検証可能にする方法論</strong>を提示する。
-      </p>
-
-      <p style="margin-top:12px; line-height:1.75;">
-        さらに、この枠組みを<strong>LLMおよびRAGシステム</strong>へ拡張し、
-        検索・生成・文脈推論の相互作用によって生じる複合的なプライバシー漏えいを分析するとともに、
-        <strong>形式検証・プライバシーベンチマーク・システム監査（audit）</strong>を接続する研究に取り組んでいる。
-      </p>
-
-      <div class="related">
-        <strong>Keywords:</strong>
-        形式手法 / プライバシー検証 / 再識別リスク /
-        LLM セキュリティ / RAG システム / モデル検査 /
-        信頼できるAI / データガバナンス
-      </div>
-    </div>
-  </section>
-
-  <section id="thesis-ja">
-    <h2>PhD Thesis (Working Title)</h2>
-    <div class="card">
-      <p style="margin:0;">
-        <strong>
-          データおよびAIシステムにおける個人情報漏えいの関係的検証フレームワーク
-        </strong>
-      </p>
-      <p class="small" style="margin:8px 0 0;">* 仮題</p>
-    </div>
-  </section>
-
-  <section id="methodology-ja">
-    <h2>Methodology</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        本研究では、Alloy と関係論理を用いて、データ変換過程および攻撃者の推論関係を形式的にモデル化する。
-        非識別化過程と再識別関係を組み合わせることにより、
-        特定のデータ公開やシステムの振る舞いが個人情報漏えいにつながり得るかを検証する。
-        これにより、データ公開前あるいはシステム設計段階において、
-        <strong>プライバシーリスクを事前に検証</strong>する方法を提示する。
-      </p>
-    </div>
-  </section>
-
-  <section id="publications-ja">
-    <h2>Publications</h2>
-    <div class="card">
-      <h3>Accepted</h3>
-
-      <div class="item">
-        <div class="title">
-          Relational Verification of Identity Disclosure Using Alloy
-        </div>
-        <div class="small">
-          ABZ 2026 — International Conference on Rigorous State-Based Methods (Springer LNCS)
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="title">
-          Formal Analysis of Re-identification Risks in Healthcare Data
-        </div>
-        <div class="small">
-          （Planned）Journal of Information Security and Applications (JISA)
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-ja">
-    <h2>Contact</h2>
-    <div class="card">
-      <p style="margin:0; line-height:1.75;">
-        Email: <a href="mailto:since1984si@gmail.com">since1984si@gmail.com</a>
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    © <span class="year"></span> Seungil Yang · Last updated: <span class="date"></span><br/>
-    <span class="small">
-      プライバシーとは単なるデータ保護ではなく、到達可能性を遮断することである。
-    </span>
-  </footer>
 </div>
-
-</div>
+</main>
 
 <script>
-  // footer date
-  const now = new Date();
-  document.querySelectorAll('.year').forEach(el => el.textContent = now.getFullYear());
-  document.querySelectorAll('.date').forEach(el => el.textContent = now.toISOString().slice(0,10));
-
-  // Language tab switching (with URL + localStorage)
-  const tabBtns = Array.from(document.querySelectorAll('.tabbtn'));
-  const pages = Array.from(document.querySelectorAll('.langpage'));
-
-  function setLang(lang) {
-    tabBtns.forEach(b => {
-      const active = b.dataset.lang === lang;
-      b.classList.toggle('active', active);
-      b.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-    pages.forEach(p => p.classList.toggle('active', p.dataset.langpage === lang));
-    document.documentElement.lang = lang;
-
-    try { localStorage.setItem('preferredLang', lang); } catch(e) {}
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState({}, '', url.toString());
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }
-
-  tabBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
-
-  (function initLang() {
-    const url = new URL(window.location.href);
-    const q = url.searchParams.get('lang');
-
-    let lang = q;
-    if (!lang) {
-      try { lang = localStorage.getItem('preferredLang'); } catch (e) {}
-    }
-
-    if (!['ko', 'ja', 'en'].includes(lang)) lang = 'en';
-
-    setLang(lang);
-  })();
+const tabs=document.querySelectorAll('.tabbtn');
+const pages=document.querySelectorAll('.langpage');
+function setLang(lang){
+ tabs.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+ pages.forEach(p=>p.classList.toggle('active',p.dataset.langpage===lang));
+}
+tabs.forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
 </script>
 </body>
 </html>
