@@ -3,56 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>
     Seungil Yang | Formal Relational Verification for Privacy, Utility, and AI Governance
   </title>
-
   <!-- Primary SEO -->
-  <meta
-    name="description"
-    content="Seungil Yang is a Ph.D. candidate at JAIST researching Relational Privacy, formal relational verification, privacy-utility trade-offs, Pareto Cliff analysis, and AI governance using Alloy and model checking."
-  />
-
-  <meta
-    name="keywords"
-    content="Seungil Yang, Seungil Marcus Yang, 양승일, JAIST, Relational Privacy, Formal Relational Verification, Privacy Utility Trade-off, Pareto Cliff, Utility Verification, AI Governance, Formal Methods, Alloy, Model Checking, AttackerContract, AssumptionSpec, Disclosure Verification, LLM Privacy, RAG Privacy, Trustworthy AI"
-  />
-
-  <meta
-    name="google-site-verification"
-    content="58qheJblPq9CSIj_spryujOr0rJkt9UpDXvmsQcGeiA"
-  />
-
   <!-- Open Graph -->
-  <meta
-    property="og:title"
-    content="Seungil Yang | Formal Relational Verification for Privacy, Utility, and AI Governance"
-  />
-
-  <meta
-    property="og:description"
-    content="Ph.D. candidate at JAIST working on Relational Privacy, privacy-utility trade-offs, Pareto Cliff analysis, and governance-aware formal verification."
-  />
-
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Seungil Yang" />
-
   <!-- Optional Twitter/X preview -->
-  <meta
-    name="twitter:title"
-    content="Seungil Yang | Formal Relational Verification"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Research on Relational Privacy, Utility Verification, Pareto Cliff analysis, and AI Governance."
-  />
-
   <!-- Theme -->
   <meta name="theme-color" content="#0b1020" />
-
- <style>
+  <style>
   :root {
     --bg: #0b1020;
     --panel: rgba(15, 23, 42, 0.78);
@@ -65,15 +26,12 @@
     --radius: 22px;
     --max: 1120px;
   }
-
   * {
     box-sizing: border-box;
   }
-
   html {
     scroll-behavior: smooth;
   }
-
   body {
     margin: 0;
     font-family:
@@ -94,17 +52,14 @@
       linear-gradient(180deg, #060a15 0%, #0b1020 100%);
     line-height: 1.7;
   }
-
   a {
     color: inherit;
     text-decoration: none;
   }
-
   .container {
     width: min(calc(100% - 32px), var(--max));
     margin: 0 auto;
   }
-
   .site-header {
     position: sticky;
     top: 0;
@@ -113,7 +68,6 @@
     background: rgba(6, 10, 21, 0.74);
     border-bottom: 1px solid var(--line);
   }
-
   .site-header .inner {
     width: min(calc(100% - 32px), var(--max));
     margin: 0 auto;
@@ -123,33 +77,27 @@
     gap: 20px;
     min-height: 72px;
   }
-
   .brand strong {
     display: block;
     font-size: 0.98rem;
   }
-
   .brand span {
     color: var(--muted);
     font-size: 0.86rem;
   }
-
   .main-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
   }
-
   .main-nav a {
     color: var(--muted);
     font-size: 0.94rem;
     transition: color 0.2s ease;
   }
-
   .main-nav a:hover {
     color: var(--text);
   }
-
   .lang-switch {
     display: inline-flex;
     border: 1px solid var(--line);
@@ -157,7 +105,6 @@
     padding: 4px;
     background: rgba(255, 255, 255, 0.03);
   }
-
   .lang-switch button {
     border: 0;
     background: transparent;
@@ -167,41 +114,33 @@
     cursor: pointer;
     font: inherit;
   }
-
   .lang-switch button.active {
     color: var(--text);
     background: rgba(255, 255, 255, 0.08);
   }
-
   .langpage {
     display: none;
   }
-
   .langpage.active {
     display: block;
   }
-
   .hero {
     padding: 64px 0 28px;
   }
-
   .hero-grid {
     display: grid;
     grid-template-columns: 1.45fr 0.95fr;
     gap: 24px;
   }
-
   .card {
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
   }
-
   .hero-card {
     padding: 34px;
   }
-
   .eyebrow {
     display: inline-block;
     color: var(--accent);
@@ -210,32 +149,27 @@
     text-transform: uppercase;
     margin-bottom: 14px;
   }
-
   h1 {
     margin: 0;
     font-size: clamp(2.2rem, 5vw, 3.8rem);
     line-height: 1.05;
     letter-spacing: -0.04em;
   }
-
   .subtitle {
     margin: 14px 0 0;
     color: var(--muted);
     font-size: clamp(1rem, 2vw, 1.24rem);
   }
-
   .lead {
     margin: 20px 0 0;
     font-size: 1.08rem;
     max-width: 62ch;
   }
-
   .sublead {
     margin: 12px 0 0;
     color: var(--muted);
     max-width: 62ch;
   }
-
   .pill-row,
   .link-list,
   .cta-row {
@@ -243,15 +177,12 @@
     flex-wrap: wrap;
     gap: 10px;
   }
-
   .pill-row {
     margin-top: 22px;
   }
-
   .cta-row {
     margin-top: 24px;
   }
-
   .pill,
   .link-chip {
     display: inline-flex;
@@ -263,7 +194,6 @@
     color: #d9f6ff;
     font-size: 0.92rem;
   }
-
   .btn {
     display: inline-flex;
     align-items: center;
@@ -276,7 +206,6 @@
     color: var(--text);
     font-weight: 600;
   }
-
   .btn.primary {
     background: linear-gradient(
       135deg,
@@ -285,62 +214,51 @@
     );
     border-color: rgba(125, 211, 252, 0.28);
   }
-
   .side-stack {
     display: grid;
     gap: 18px;
   }
-
   .side-card,
   .section-card {
     padding: 22px;
   }
-
   .side-card h3,
   .section-card h2,
   .section-card h3 {
     margin-top: 0;
   }
-
   .meta-list {
     display: grid;
     gap: 12px;
   }
-
   .meta-label {
     color: var(--muted);
     font-size: 0.84rem;
     text-transform: uppercase;
   }
-
   .section {
     padding: 16px 0;
   }
-
   .section-grid {
     display: grid;
     grid-template-columns: 1.02fr 0.98fr;
     gap: 22px;
   }
-
   .focus-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
-
   .focus-item {
     padding: 18px;
     border-radius: 18px;
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.03);
   }
-
   .timeline {
     display: grid;
     gap: 14px;
   }
-
   .timeline-item,
   .pub-item {
     padding: 18px 20px;
@@ -348,44 +266,36 @@
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.03);
   }
-
   .small {
     color: var(--muted);
     font-size: 0.94rem;
   }
-
   ul {
     margin-bottom: 0;
   }
-
   footer {
     padding: 34px 0 56px;
     color: var(--muted);
     font-size: 0.92rem;
   }
-
   @media (max-width: 960px) {
     .hero-grid,
     .section-grid {
       grid-template-columns: 1fr;
     }
-
     .site-header {
       position: static;
     }
   }
-
   @media (max-width: 720px) {
     .site-header .inner {
       flex-direction: column;
       align-items: flex-start;
       padding: 12px 0;
     }
-
     .focus-grid {
       grid-template-columns: 1fr;
     }
-
     .hero-card,
     .side-card,
     .section-card {
@@ -394,1870 +304,1639 @@
   }
 </style>
 </head>
-  <body>
- <header class="site-header">
 
-    <div class="inner">
 
-      <div class="brand">
 
-        <strong>Seungil Yang</strong>
 
-        <span>Relational Privacy · Utility Verification · AI Governance</span>
 
-      </div>
 
-     <nav class="main-nav" aria-label="Main navigation">
-  <a href="#about-en">About</a>
-  <a href="#research-en">Research</a>
-  <a href="#program-en">Program</a>
-  <a href="#education-en">Education</a>
-</nav>
-
-      <div class="lang-switch" aria-label="Language switcher">
-
-        <button class="tabbtn active" data-lang="en" type="button">EN</button>
-
-        <button class="tabbtn" data-lang="ko" type="button">KO</button>
-
-        <button class="tabbtn" data-lang="ja" type="button">JA</button>
-
-      </div>
-
-    </div>
-
+<body>
+  <header class="site-header">
+<div class="inner">
+  <div class="brand">
+    <strong>Seungil Yang</strong>
+    <span>
+      Formal Relational Verification · Utility Verification · AI Governance
+    </span>
+  </div>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#about-en">About</a>
+    <a href="#research-en">Research</a>
+    <a href="#program-en">Program</a>
+    <a href="#publications-en">Publications</a>
+    <a href="#education-en">Education</a>
+  </nav>
+  <div class="lang-switch" aria-label="Language switcher">
+    <button class="tabbtn active" data-lang="en" type="button">EN</button>
+    <button class="tabbtn" data-lang="ko" type="button">KO</button>
+    <button class="tabbtn" data-lang="ja" type="button">JA</button>
+  </div>
+</div>
   </header>
-
   <main>
-  <!-- ========================= ENGLISH ========================= -->
-
+<!-- ========================= ENGLISH ========================= -->
 <div class="langpage active" id="page-en" data-langpage="en">
-
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
-
-      <article class="card hero-card">
-
-        <div class="eyebrow">
-          Ph.D. Candidate at JAIST
-        </div>
-
-        <h1>Seungil Yang</h1>
-
-        <p class="subtitle">
-          Formal Relational Verification
-          for Privacy, Utility, and AI Governance
-        </p>
-
-        <p class="lead">
-          I study how privacy disclosure,
-          utility preservation,
-          and governance constraints
-          can be modeled and verified
-          before deployment using relational logic,
-          model checking,
-          and system-level reasoning.
-        </p>
-
-        <p class="sublead">
-          My research program frames
-          privacy as relational reachability
-          and utility as meaningful distinguishability,
-          revealing structural incompatibilities
-          between the two through formal verification.
-        </p>
-
-        <div class="pill-row">
-
-          <span class="pill">
-            Relational Privacy
-          </span>
-
-          <span class="pill">
-            Utility Verification
-          </span>
-
-          <span class="pill">
-            Pareto Cliff
-          </span>
-
-          <span class="pill">
-            Formal Verification
-          </span>
-
-          <span class="pill">
-            AI Governance
-          </span>
-
-          <span class="pill">
-            LLM / RAG Privacy
-          </span>
-
-          <span class="pill">
-            Alloy / Model Checking
-          </span>
-
-        </div>
-
-        <div class="cta-row">
-
-          <a class="btn primary" href="#publications-en">
-            View Publications
-          </a>
-
-          <a class="btn" href="#program-en">
-            Research Program
-          </a>
-
-          <a class="btn" href="#contact-en">
-            Contact
-          </a>
-
-        </div>
-
-      </article>
-
-      <div class="side-stack">
-
-        <!-- CURRENT POSITION -->
-        <aside class="card side-card">
-
-          <h3>Current Position</h3>
-
-          <div class="meta-list">
-
-            <div>
-              <div class="meta-label">
-                Affiliation
-              </div>
-
-              <div>
-                Japan Advanced Institute of Science and Technology (JAIST)
-              </div>
-            </div>
-
-            <div>
-              <div class="meta-label">
-                Graduate School
-              </div>
-
-              <div>
-                Graduate School of Advanced Science and Technology
-              </div>
-            </div>
-
-            <div>
-              <div class="meta-label">
-                Research Area
-              </div>
-
-              <div>
-                Formal Methods · Privacy · AI Governance
-              </div>
-            </div>
-
-            <div>
-              <div class="meta-label">
-                Advisor
-              </div>
-
-              <div>
-                Prof. Toshiaki Aoki
-              </div>
-            </div>
-
-          </div>
-
-        </aside>
-
-        <!-- PROFILES -->
-        <aside class="card side-card">
-
-          <h3>Profiles</h3>
-
-          <div class="link-list">
-
-            <a
-              class="link-chip"
-              href="mailto:s2360003@jaist.ac.jp"
-            >
-              Email
-            </a>
-
-            <a
-              class="link-chip"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Google Scholar
-            </a>
-
-            <a
-              class="link-chip"
-              href="https://orcid.org/0009-0003-8389-2154"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ORCID
-            </a>
-
-            <a
-              class="link-chip"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </aside>
-
-        <!-- RESEARCH STATEMENT -->
-        <aside class="card side-card">
-
-          <h3>Research Statement</h3>
-
-          <p class="small" style="margin:0;">
-
-            Privacy is not merely about hiding data.
-
-            It is about preventing identifiable states
-            from becoming reachable through
-            transformations,
-            inference,
-            and system interactions.
-
-          </p>
-
-        </aside>
-
-      </div>
-
+  <article class="card hero-card">
+    <div class="eyebrow">
+      Ph.D. Candidate at JAIST
     </div>
+    <h1>Seungil Yang</h1>
+    <p class="subtitle">
+      Formal Relational Verification
+      for Privacy, Utility, and AI Governance
+    </p>
+    <p class="lead">
+      I study how privacy disclosure,
+      utility preservation,
+      and governance constraints
+      can be modeled and verified
+      before deployment using relational logic,
+      model checking,
+      and system-level reasoning.
+    </p>
+    <p class="sublead">
+      My current work focuses on
+      <strong>question-driven utility verification</strong>,
+      where utility is formalized as the preservation of
+      relational distinguishability required by a specific analytical task.
+      This work serves as a bridge from relational privacy
+      toward governance-aware verification for data-driven,
+      LLM, and RAG systems.
+    </p>
+    <div class="pill-row">
+      <span class="pill">
+        Relational Privacy
+      </span>
+      <span class="pill">
+        Question-Driven Utility Verification
+      </span>
+      <span class="pill">
+        Relational Distinguishability
+      </span>
+      <span class="pill">
+        Pareto Cliff
+      </span>
+      <span class="pill">
+        AI Governance
+      </span>
+      <span class="pill">
+        LLM / RAG Privacy
+      </span>
+      <span class="pill">
+        Alloy / Model Checking
+      </span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#publications-en">
+        View Publications
+      </a>
+      <a class="btn" href="#program-en">
+        Research Program
+      </a>
+      <a class="btn" href="mailto:s2360003@jaist.ac.jp">
+        Contact
+      </a>
+    </div>
+  </article>
+  <div class="side-stack">
+    <!-- CURRENT POSITION -->
+    <aside class="card side-card">
+      <h3>Current Position</h3>
+      <div class="meta-list">
+        <div>
+          <div class="meta-label">
+            Affiliation
+          </div>
+          <div>
+            Japan Advanced Institute of Science and Technology (JAIST)
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            Graduate School
+          </div>
+          <div>
+            Graduate School of Advanced Science and Technology
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            Research Area
+          </div>
+          <div>
+            Formal Methods · Privacy · Utility · AI Governance
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            Advisor
+          </div>
+          <div>
+            Prof. Toshiaki Aoki
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- PROFILES -->
+    <aside class="card side-card">
+      <h3>Profiles</h3>
+      <div class="link-list">
+        <a
+          class="link-chip"
+          href="mailto:s2360003@jaist.ac.jp"
+        >
+          Email
+        </a>
+        <a
+          class="link-chip"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Scholar
+        </a>
+        <a
+          class="link-chip"
+          href="https://orcid.org/0009-0003-8389-2154"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ORCID
+        </a>
+        <a
+          class="link-chip"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+    </aside>
+    <!-- RESEARCH STATEMENT -->
+    <aside class="card side-card">
+      <h3>Research Statement</h3>
+      <p class="small" style="margin:0;">
+        Privacy is not merely about hiding data.
+        It is about preventing identifiable states
+        from becoming reachable through
+        transformations,
+        inference,
+        and system interactions.
+      </p>
+    </aside>
+  </div>
+</div>
   </section>
-
   <!-- ABOUT -->
   <section class="section" id="about-en">
-
-    <div class="container section-grid">
-
-      <div class="card section-card">
-
-        <h2>About</h2>
-
-        <p>
-
-          I am a Ph.D. candidate at JAIST
-          working on
-          <strong>Relational Privacy</strong> —
-          a research program that studies
-          privacy,
-          utility,
-          and governance
-          through formal relational verification.
-
-        </p>
-
-        <p>
-
-          My work models identity disclosure
-          as a reachability problem
-          over data transformations,
-          attacker inference,
+<div class="container section-grid">
+  <div class="card section-card">
+    <h2>About</h2>
+    <p>
+      I am a Ph.D. candidate at JAIST
+      working on
+      <strong>formal relational verification</strong>
+      for privacy, utility, and AI governance.
+      My research develops relational models
+      for analyzing how information disclosure,
+      analytical utility, and governance constraints
+      interact in data-driven systems.
+    </p>
+    <p>
+      My earlier work models identity disclosure
+      as a reachability problem over
+      data transformations,
+      attacker inference,
+      and system interactions.
+      This view treats privacy as a structural property:
+      whether identifiable states become logically reachable
+      under specified assumptions.
+    </p>
+    <p>
+      My current work extends this line of research
+      to utility verification.
+      Instead of treating utility as a vague aggregate score,
+      I formalize it as the preservation of
+      task-specific relational distinguishability.
+      This provides a foundation for analyzing
+      privacy-utility trade-offs and Pareto Cliff phenomena.
+    </p>
+    <p>
+      In the longer term,
+      I aim to extend this framework toward
+      LLM and RAG systems,
+      where disclosure may emerge through interactions among
+      retrieval, memory, external knowledge, and generation.
+    </p>
+  </div>
+  <div class="card section-card">
+    <h2>Research Axes</h2>
+    <div class="focus-grid">
+      <div class="focus-item">
+        <h3>
+          Relational Privacy
+        </h3>
+        <p class="small">
+          Privacy as relational reachability
+          across data transformations,
+          inference relations,
           and system interactions.
-
         </p>
-
-        <p>
-
-          More recently,
-          I extend this framework toward
-          LLM and RAG systems,
-          where disclosure may emerge through
-          interactions among retrieval,
+      </div>
+      <div class="focus-item">
+        <h3>
+          Utility Verification
+        </h3>
+        <p class="small">
+          Utility as the preservation of
+          meaningful distinguishability
+          required by an analytical task.
+        </p>
+      </div>
+      <div class="focus-item">
+        <h3>
+          AI Governance
+        </h3>
+        <p class="small">
+          Governance-aware verification
+          for disclosure,
+          compliance,
+          accountability,
+          and system-level constraints.
+        </p>
+      </div>
+      <div class="focus-item">
+        <h3>
+          LLM / RAG Systems
+        </h3>
+        <p class="small">
+          Compositional privacy analysis
+          for retrieval,
+          generation,
           memory,
-          external knowledge,
-          and generation.
-
+          and contextual interactions.
         </p>
-
       </div>
-
-      <div class="card section-card">
-
-        <h2>Research Axes</h2>
-
-        <div class="focus-grid">
-
-          <div class="focus-item">
-
-            <h3>
-              Relational Privacy
-            </h3>
-
-            <p class="small">
-
-              Privacy as relational reachability
-              across transformations
-              and inference processes.
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              Utility Verification
-            </h3>
-
-            <p class="small">
-
-              Utility as preservation of
-              meaningful distinguishability
-              between records.
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              AI Governance
-            </h3>
-
-            <p class="small">
-
-              Governance-aware verification
-              for privacy,
-              disclosure,
-              and compliance constraints.
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              LLM / RAG Systems
-            </h3>
-
-            <p class="small">
-
-              Compositional privacy analysis
-              for retrieval,
-              generation,
-              memory,
-              and contextual interactions.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
-
+  </div>
+</div>
   </section>
-
   <!-- RESEARCH PROGRAM -->
   <section class="section" id="program-en">
-
-    <div class="container">
-
-      <div class="card section-card">
-
-        <h2>Research Program</h2>
-
-        <div class="timeline">
-
-     <div class="timeline-item">
-
-  <h3>
-
-    ABZ 2026
-
-  </h3>
-
-  <div class="small">
-
-    Accepted · Springer LNCS
-
-  </div>
-
-  <p>
-
-    Establishes privacy as relational reachability
-
-    using Alloy-based formal verification.
-
-  </p>
-
-</div>
-
-         <div class="timeline-item">
-
-  <h3>
-    JISA Extension
-  </h3>
-
-  <div class="small">
-    In Preparation
-  </div>
-
-  <p>
-    Extends relational privacy toward utility
-    verification through meaningful distinguishability
-    and Pareto Cliff analysis.
-  </p>
-
-</div>
-        <div class="timeline-item">
-
-  <h3>
-    Ph.D. Thesis
-  </h3>
-
-  <div class="small">
-    Ongoing Research Program
-  </div>
-
-  <p>
-    Integrates privacy, utility,
-    and governance-aware verification
-    into a unified relational framework.
-  </p>
-
-</div>
-
-       <div class="timeline-item">
-
-  <h3>
-    AIME 2027
-  </h3>
-
-  <div class="small">
-    Planned Validation Study
-  </div>
-
-  <p>
-    Empirical validation of Pareto Cliff
-    phenomena using real-world
-    clinical and healthcare datasets.
-  </p>
-
-</div>
-        <div class="timeline-item">
-
-  <h3>
-    Future Directions
-  </h3>
-
-  <div class="small">
-    Long-term Research Vision
-  </div>
-
-  <p>
-    Extending relational verification toward
-    trustworthy AI,
-    RAG privacy,
-    and governance-aware AI systems.
-  </p>
-
-</div>
+<div class="container">
+  <div class="card section-card">
+    <h2>Research Program</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>
+          ABZ 2026
+        </h3>
+        <div class="small">
+          Accepted · Springer LNCS
         </div>
-
+        <p>
+          Establishes privacy as relational reachability
+          using Alloy-based formal verification.
+          This work provides the foundation for treating
+          disclosure as a reachability problem over
+          transformations and inference relations.
+        </p>
       </div>
-
+      <div class="timeline-item">
+        <h3>
+          ICFEM 2026 Submission
+        </h3>
+        <div class="small">
+          Submitted · Question-Driven Utility Verification
+        </div>
+        <p>
+          Develops utility verification as
+          task-driven relational distinguishability.
+          The paper defines utility requirements,
+          preservation, utility counterexamples,
+          and usefulness, and uses bounded relational search
+          to identify concrete witnesses of utility loss.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          JISA Extension
+        </h3>
+        <div class="small">
+          In Preparation
+        </div>
+        <p>
+          Integrates relational privacy and utility verification
+          into a unified framework for analyzing
+          privacy-utility trade-offs and Pareto Cliff phenomena.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          Ph.D. Thesis
+        </h3>
+        <div class="small">
+          Ongoing Research Program
+        </div>
+        <p>
+          Integrates privacy, utility,
+          and governance-aware verification
+          into a unified relational framework
+          for data-driven and AI systems.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          Future Directions
+        </h3>
+        <div class="small">
+          Long-term Research Vision
+        </div>
+        <p>
+          Extending relational verification toward
+          trustworthy AI,
+          LLM/RAG privacy,
+          and governance-aware AI systems.
+        </p>
+      </div>
     </div>
-
+  </div>
+</div>
   </section>
-
   <!-- RESEARCH -->
   <section class="section" id="research-en">
-
-    <div class="container section-grid">
-
-      <div class="card section-card">
-
-        <h2>Research Interests</h2>
-
-        <p>
-
-          My research aims to establish
-          formal foundations for
-          privacy,
-          utility,
-          and governance
-          in data-driven systems.
-
-        </p>
-
-        <p>
-
-          Rather than treating privacy
-          as statistical masking,
-          I study privacy as
-          a structural property of systems:
-          whether identifiable states
-          become reachable through
-          transformations and inference.
-
-        </p>
-
-        <p>
-
-          This perspective enables
-          design-time verification
-          of disclosure risks
-          and provides a rigorous alternative
-          to purely heuristic
-          or empirical approaches.
-
-        </p>
-
-      </div>
-
-      <div class="card section-card">
-
-        <h2>Methodology</h2>
-
-        <p>
-
-          I use Alloy and relational logic
-          to formally model
-          data transformations,
-          attacker assumptions,
-          utility constraints,
-          and system interactions.
-
-        </p>
-
-        <p>
-
-          By composing
-          de-identification transformations
-          with re-identification relations,
-          I verify whether disclosure
-          is logically reachable.
-
-        </p>
-
-        <p>
-          My recent work introduces:
-        </p>
-
-        <ul>
-
-          <li>
-            Utility as meaningful distinguishability
-          </li>
-
-          <li>
-            AssumptionSpec vs AttackerContract separation
-          </li>
-
-          <li>
-            Pareto Cliff as structural incompatibility
-          </li>
-
-          <li>
-            Governance-aware verification
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
+<div class="container section-grid">
+  <div class="card section-card">
+    <h2>Research Interests</h2>
+    <p>
+      My research aims to establish
+      formal foundations for
+      privacy,
+      utility,
+      and governance
+      in data-driven and AI systems.
+    </p>
+    <p>
+      Rather than treating privacy
+      as statistical masking,
+      I study privacy as
+      a structural property of systems:
+      whether identifiable states
+      become reachable through
+      transformations,
+      inference,
+      and interaction.
+    </p>
+    <p>
+      In parallel,
+      I study utility as a relational property:
+      whether the distinctions required by
+      a specific analytical task
+      are preserved after transformation.
+      This makes utility loss observable as
+      a counterexample rather than merely
+      an aggregate degradation score.
+    </p>
+    <p>
+      This perspective enables
+      design-time verification
+      of disclosure risks,
+      utility loss,
+      and governance constraints,
+      providing a rigorous alternative
+      to purely heuristic or empirical approaches.
+    </p>
+  </div>
+  <div class="card section-card">
+    <h2>Methodology</h2>
+    <p>
+      I use Alloy and relational logic
+      to formally model
+      data transformations,
+      attacker assumptions,
+      utility requirements,
+      and system interactions.
+    </p>
+    <p>
+      By composing
+      de-identification transformations
+      with inference relations,
+      I verify whether disclosure
+      is logically reachable.
+      By comparing transformed records
+      against task-specific utility requirements,
+      I verify whether meaningful distinctions
+      are preserved.
+    </p>
+    <p>
+      My recent work introduces:
+    </p>
+    <ul>
+      <li>
+        Utility as task-driven relational distinguishability
+      </li>
+      <li>
+        Utility counterexamples as witnesses of utility loss
+      </li>
+      <li>
+        Bounded relational search using Alloy
+      </li>
+      <li>
+        AssumptionSpec vs AttackerContract separation
+      </li>
+      <li>
+        Pareto Cliff as structural incompatibility
+      </li>
+      <li>
+        Governance-aware verification
+      </li>
+    </ul>
+  </div>
+</div>
   </section>
-<!-- EDUCATION -->
-<section class="section" id="education-en">
-  <div class="container">
-    <div class="card section-card">
-
-      <h2>Education</h2>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-          <div class="small">
-            Mar 2023 – Present · Expected Sep 2026 · Transdisciplinary Sciences / Information Science
-          </div>
-          <p>
-            Research on formal relational verification of privacy, utility, and governance in data and AI systems.
-          </p>
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications-en">
+<div class="container">
+  <div class="card section-card">
+    <h2>Publications and Manuscripts</h2>
+    <div class="timeline">
+      <div class="pub-item">
+        <h3>
+          Question-Driven Utility Verification via Bounded Relational Search
+        </h3>
+        <div class="small">
+          Submitted to ICFEM 2026
         </div>
-
-        <div class="timeline-item">
-          <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-          <div class="small">
-            Apr 2020 – Feb 2023 · Transdisciplinary Sciences / Information Science
-          </div>
-          <p>
-            Studied formal methods, model checking, and information science.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>M.Div. — Biola University</h3>
-          <div class="small">
-            Jun 2012 – May 2018 · La Mirada, California, USA · Intercultural Studies
-          </div>
-          <p>
-              Graduate-level study in intercultural studies and multicultural education.
-          </p>
-        </div>
-
+        <p>
+          This paper formalizes utility as relational distinguishability:
+          a transformed dataset is useful for a specified analytical task
+          when the record pairs required by that task remain distinguishable
+          after transformation. The framework defines utility requirements,
+          preservation, utility counterexamples, and usefulness,
+          and uses Alloy to find bounded counterexamples to utility loss.
+        </p>
       </div>
-
+      <div class="pub-item">
+        <h3>
+          Relational Privacy Verification via Bounded Model Finding
+        </h3>
+        <div class="small">
+          Accepted to ABZ 2026 · Springer LNCS
+        </div>
+        <p>
+          This work establishes privacy as relational reachability
+          and uses Alloy-based bounded model finding
+          to verify whether identity disclosure is logically reachable
+          under specified transformation and attacker assumptions.
+        </p>
+      </div>
+      <div class="pub-item">
+        <h3>
+          Formal Relational Verification for Privacy, Utility, and Governance
+        </h3>
+        <div class="small">
+          In Preparation · Journal Extension
+        </div>
+        <p>
+          This manuscript extends relational privacy verification
+          toward utility preservation,
+          Pareto Cliff analysis,
+          and governance-aware reasoning
+          for data-driven and AI systems.
+        </p>
+      </div>
     </div>
   </div>
-</section>
+</div>
+  </section>
+  <!-- EDUCATION -->
+  <section class="section" id="education-en">
+    <div class="container">
+      <div class="card section-card">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
+        <div class="small">
+          Apr 2023 – Present · Expected Sep 2026 · Transdisciplinary Sciences / Information Science
+        </div>
+        <p>
+          Research on formal relational verification of privacy, utility, and governance in data and AI systems.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
+        <div class="small">
+          Apr 2020 – Mar 2023 · Transdisciplinary Sciences / Information Science
+        </div>
+        <p>
+          Studied formal methods, model checking, and information science.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.Div. — Biola University</h3>
+        <div class="small">
+          Jun 2012 – May 2018 · La Mirada, California, USA · Intercultural Studies
+        </div>
+        <p>
+          Graduate-level study in intercultural studies and multicultural education.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
 </div>
 <!-- ========================= KOREAN ========================= -->
-
 <div class="langpage" id="page-ko" data-langpage="ko">
-
   <!-- HERO -->
   <section class="hero">
-
-    <div class="container hero-grid">
-
-      <article class="card hero-card">
-
-        <div class="eyebrow">
-          JAIST 박사과정
-        </div>
-
-        <h1>양승일</h1>
-
-        <p class="subtitle">
-          프라이버시, 유용성, AI 거버넌스를 위한
-          관계적 형식 검증
-        </p>
-
-        <p class="lead">
-
-          저는 관계 논리,
-          모델 체킹,
-          시스템 수준 추론을 바탕으로,
-          프라이버시 유출,
-          유용성 보존,
-          거버넌스 제약이
-          시스템 배포 이전 단계에서
-          어떻게 검증될 수 있는지를 연구하고 있습니다.
-
-        </p>
-
-        <p class="sublead">
-
-          저의 연구는
-          프라이버시를 관계적 도달 가능성
-          (relational reachability),
-          유용성을 의미 있는 구별 가능성
-          (meaningful distinguishability)
-          으로 정의하며,
-          두 요소 사이의 구조적 충돌을
-          형식 검증을 통해 분석하는 것을 목표로 합니다.
-
-        </p>
-
-        <div class="pill-row">
-
-          <span class="pill">
-            Relational Privacy
-          </span>
-
-          <span class="pill">
-            Utility Verification
-          </span>
-
-          <span class="pill">
-            Pareto Cliff
-          </span>
-
-          <span class="pill">
-            Formal Verification
-          </span>
-
-          <span class="pill">
-            AI Governance
-          </span>
-
-          <span class="pill">
-            LLM / RAG Privacy
-          </span>
-
-          <span class="pill">
-            Alloy / Model Checking
-          </span>
-
-        </div>
-
-        <div class="cta-row">
-
-          <a class="btn primary" href="#publications-ko">
-            논문 보기
-          </a>
-
-          <a class="btn" href="#program-ko">
-            연구 흐름
-          </a>
-
-          <a class="btn" href="#contact-ko">
-            연락하기
-          </a>
-
-        </div>
-
-      </article>
-
-      <div class="side-stack">
-
-        <!-- CURRENT POSITION -->
-        <aside class="card side-card">
-
-          <h3>현재 소속</h3>
-
-          <div class="meta-list">
-
-            <div>
-
-              <div class="meta-label">
-                소속
-              </div>
-
-              <div>
-                Japan Advanced Institute of Science and Technology (JAIST)
-              </div>
-
-            </div>
-
-            <div>
-
-              <div class="meta-label">
-                대학원
-              </div>
-
-              <div>
-                Graduate School of Advanced Science and Technology
-              </div>
-
-            </div>
-
-            <div>
-
-              <div class="meta-label">
-                연구 분야
-              </div>
-
-              <div>
-                형식기법 · 프라이버시 · AI 거버넌스
-              </div>
-
-            </div>
-
-            <div>
-
-              <div class="meta-label">
-                지도교수
-              </div>
-
-              <div>
-                아오키 토시아키 교수
-              </div>
-
-            </div>
-
-          </div>
-
-        </aside>
-
-        <!-- PROFILES -->
-        <aside class="card side-card">
-
-          <h3>프로필</h3>
-
-          <div class="link-list">
-
-            <a
-              class="link-chip"
-              href="mailto:s2360003@jaist.ac.jp"
-            >
-              이메일
-            </a>
-
-            <a
-              class="link-chip"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Google Scholar
-            </a>
-
-            <a
-              class="link-chip"
-              href="https://orcid.org/0009-0003-8389-2154"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ORCID
-            </a>
-
-            <a
-              class="link-chip"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </aside>
-
-        <!-- RESEARCH STATEMENT -->
-        <aside class="card side-card">
-
-          <h3>연구 문장</h3>
-
-          <p class="small" style="margin:0;">
-
-            프라이버시는 단순히 데이터를 숨기는 것이 아니다.
-
-            그것은 변환,
-            추론,
-            시스템 상호작용을 통해
-            식별 가능한 상태에 도달하는 것을
-            방지하는 것이다.
-
-          </p>
-
-        </aside>
-
-      </div>
-
+<div class="container hero-grid">
+  <article class="card hero-card">
+    <div class="eyebrow">
+      JAIST 박사과정
     </div>
-
+    <h1>양승일</h1>
+    <p class="subtitle">
+      프라이버시, 유용성, AI 거버넌스를 위한
+      관계적 형식 검증
+    </p>
+    <p class="lead">
+      저는 관계 논리,
+      모델 체킹,
+      시스템 수준 추론을 바탕으로,
+      프라이버시 유출,
+      유용성 보존,
+      거버넌스 제약이
+      시스템 배포 이전 단계에서
+      어떻게 검증될 수 있는지를 연구하고 있습니다.
+    </p>
+    <p class="sublead">
+      현재 연구는
+      <strong>질문 기반 유용성 검증</strong>
+      에 초점을 두고 있습니다.
+      여기서 유용성은 특정 분석 과제가 요구하는
+      관계적 구별 가능성
+      (relational distinguishability)
+      이 데이터 변환 이후에도 보존되는지로 정식화됩니다.
+      이 연구는 관계적 프라이버시 연구를
+      데이터 기반 시스템, LLM, RAG 시스템을 위한
+      거버넌스 지향 형식 검증으로 확장하기 위한
+      연결점입니다.
+    </p>
+    <div class="pill-row">
+      <span class="pill">
+        Relational Privacy
+      </span>
+      <span class="pill">
+        Question-Driven Utility Verification
+      </span>
+      <span class="pill">
+        Relational Distinguishability
+      </span>
+      <span class="pill">
+        Pareto Cliff
+      </span>
+      <span class="pill">
+        AI Governance
+      </span>
+      <span class="pill">
+        LLM / RAG Privacy
+      </span>
+      <span class="pill">
+        Alloy / Model Checking
+      </span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#publications-ko">
+        논문 보기
+      </a>
+      <a class="btn" href="#program-ko">
+        연구 흐름
+      </a>
+      <a class="btn" href="mailto:s2360003@jaist.ac.jp">
+        연락하기
+      </a>
+    </div>
+  </article>
+  <div class="side-stack">
+    <!-- CURRENT POSITION -->
+    <aside class="card side-card">
+      <h3>현재 소속</h3>
+      <div class="meta-list">
+        <div>
+          <div class="meta-label">
+            소속
+          </div>
+          <div>
+            Japan Advanced Institute of Science and Technology (JAIST)
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            대학원
+          </div>
+          <div>
+            Graduate School of Advanced Science and Technology
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            연구 분야
+          </div>
+          <div>
+            형식기법 · 프라이버시 · 유용성 · AI 거버넌스
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            지도교수
+          </div>
+          <div>
+            아오키 토시아키 교수
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- PROFILES -->
+    <aside class="card side-card">
+      <h3>프로필</h3>
+      <div class="link-list">
+        <a
+          class="link-chip"
+          href="mailto:s2360003@jaist.ac.jp"
+        >
+          이메일
+        </a>
+        <a
+          class="link-chip"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Scholar
+        </a>
+        <a
+          class="link-chip"
+          href="https://orcid.org/0009-0003-8389-2154"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ORCID
+        </a>
+        <a
+          class="link-chip"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+    </aside>
+    <!-- RESEARCH STATEMENT -->
+    <aside class="card side-card">
+      <h3>연구 문장</h3>
+      <p class="small" style="margin:0;">
+        프라이버시는 단순히 데이터를 숨기는 것이 아니다.
+        그것은 변환,
+        추론,
+        시스템 상호작용을 통해
+        식별 가능한 상태에 도달하는 것을
+        방지하는 것이다.
+      </p>
+    </aside>
+  </div>
+</div>
   </section>
-
   <!-- ABOUT -->
   <section class="section" id="about-ko">
-
-    <div class="container section-grid">
-
-      <div class="card section-card">
-
-        <h2>소개</h2>
-
-        <p>
-
-          저는 JAIST 박사과정에 재학 중이며,
-          <strong>Relational Privacy</strong>
-          라는 연구 방향 아래
-          프라이버시,
-          유용성,
-          거버넌스를
-          관계적 형식 검증을 통해 연구하고 있습니다.
-
-        </p>
-
-        <p>
-
-          제 연구는
+<div class="container section-grid">
+  <div class="card section-card">
+    <h2>소개</h2>
+    <p>
+      저는 JAIST 박사과정에 재학 중이며,
+      프라이버시,
+      유용성,
+      AI 거버넌스를 위한
+      <strong>관계적 형식 검증</strong>
+      을 연구하고 있습니다.
+      제 연구는 데이터 기반 시스템에서
+      정보 유출,
+      분석적 유용성,
+      거버넌스 제약이
+      어떻게 상호작용하는지를 분석하기 위한
+      관계적 모델을 개발하는 것을 목표로 합니다.
+    </p>
+    <p>
+      초기 연구에서는
+      개인정보 유출을
+      데이터 변환,
+      공격자 추론,
+      시스템 상호작용 위에서의
+      도달 가능성 문제로 모델링했습니다.
+      이 관점은 프라이버시를
+      특정 가정 아래에서 식별 가능한 상태가
+      논리적으로 도달 가능한지 여부라는
+      구조적 속성으로 다룹니다.
+    </p>
+    <p>
+      현재 연구는 이 흐름을
+      유용성 검증으로 확장합니다.
+      유용성을 모호한 전체 점수로 다루는 대신,
+      특정 분석 과제가 요구하는
+      관계적 구별 가능성이 보존되는지로 정식화합니다.
+      이를 통해 privacy-utility trade-off와
+      Pareto Cliff 현상을 형식적으로 분석할 수 있습니다.
+    </p>
+    <p>
+      장기적으로는 이러한 프레임워크를
+      LLM 및 RAG 시스템으로 확장하고자 합니다.
+      이러한 시스템에서는 retrieval,
+      memory,
+      external knowledge,
+      generation 사이의 상호작용을 통해
+      새로운 disclosure path가 발생할 수 있습니다.
+    </p>
+  </div>
+  <div class="card section-card">
+    <h2>연구 축</h2>
+    <div class="focus-grid">
+      <div class="focus-item">
+        <h3>
+          Relational Privacy
+        </h3>
+        <p class="small">
           데이터 변환,
-          공격자 추론,
-          시스템 상호작용을 통해
-          개인정보 유출이
-          어떻게 발생 가능한지를
-          관계적 도달 가능성 문제로 모델링합니다.
-
+          추론 관계,
+          시스템 상호작용을 가로지르는
+          관계적 도달 가능성으로
+          프라이버시를 정의합니다.
         </p>
-
-        <p>
-
-          최근에는 이러한 프레임워크를
-          LLM 및 RAG 시스템으로 확장하고 있으며,
-          retrieval,
-          memory,
-          external knowledge,
-          generation 간 상호작용에서 발생하는
-          새로운 disclosure path를 연구하고 있습니다.
-
+      </div>
+      <div class="focus-item">
+        <h3>
+          Utility Verification
+        </h3>
+        <p class="small">
+          특정 분석 과제가 요구하는
+          의미 있는 구별 가능성의 보존을
+          유용성으로 정의합니다.
         </p>
-
       </div>
-
-      <div class="card section-card">
-
-        <h2>연구 축</h2>
-
-        <div class="focus-grid">
-
-          <div class="focus-item">
-
-            <h3>
-              Relational Privacy
-            </h3>
-
-            <p class="small">
-
-              데이터 변환과 추론 과정에서의
-              관계적 도달 가능성으로
-              프라이버시를 정의합니다.
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              Utility Verification
-            </h3>
-
-            <p class="small">
-
-              의미 있는 구별 가능성의 보존을
-              유용성으로 정의합니다.
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              AI Governance
-            </h3>
-
-            <p class="small">
-
-              거버넌스와 disclosure 제약을
-              형식적으로 검증합니다.
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              LLM / RAG Systems
-            </h3>
-
-            <p class="small">
-
-              검색,
-              생성,
-              메모리,
-              문맥 상호작용에 대한
-              조합적 프라이버시 분석을 연구합니다.
-
-            </p>
-
-          </div>
-
-        </div>
-
+      <div class="focus-item">
+        <h3>
+          AI Governance
+        </h3>
+        <p class="small">
+          disclosure,
+          compliance,
+          accountability,
+          시스템 수준 제약을 위한
+          거버넌스 지향 형식 검증을 연구합니다.
+        </p>
       </div>
-
+      <div class="focus-item">
+        <h3>
+          LLM / RAG Systems
+        </h3>
+        <p class="small">
+          검색,
+          생성,
+          메모리,
+          문맥 상호작용에 대한
+          조합적 프라이버시 분석을 연구합니다.
+        </p>
+      </div>
     </div>
-
+  </div>
+</div>
   </section>
-
   <!-- RESEARCH PROGRAM -->
   <section class="section" id="program-ko">
-
-    <div class="container">
-
-      <div class="card section-card">
-
-        <h2>연구 흐름</h2>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
-
-  <h3>
-
-    ABZ 2026
-
-  </h3>
-
-  <div class="small">
-
-    Accepted · Springer LNCS
-
-  </div>
-
-  <p>
-
-    Establishes privacy as relational reachability
-
-    using Alloy-based formal verification.
-
-  </p>
-
-</div>
+<div class="container">
+  <div class="card section-card">
+    <h2>연구 흐름</h2>
+    <div class="timeline">
       <div class="timeline-item">
-
-  <h3>
-    JISA Extension
-  </h3>
-
-  <div class="small">
-    In Preparation
-  </div>
-
-  <p>
-    Extends relational privacy toward utility
-    verification through meaningful distinguishability
-    and Pareto Cliff analysis.
-  </p>
-
-</div>
-        <div class="timeline-item">
-
-  <h3>
-    Ph.D. Thesis
-  </h3>
-
-  <div class="small">
-    Ongoing Research Program
-  </div>
-
-  <p>
-    Integrates privacy, utility,
-    and governance-aware verification
-    into a unified relational framework.
-  </p>
-
-</div>
-
-      <div class="timeline-item">
-
-  <h3>
-    AIME 2027
-  </h3>
-
-  <div class="small">
-    Planned Validation Study
-  </div>
-
-  <p>
-    Empirical validation of Pareto Cliff
-    phenomena using real-world
-    clinical and healthcare datasets.
-  </p>
-
-</div>
-         <div class="timeline-item">
-
-  <h3>
-    Future Directions
-  </h3>
-
-  <div class="small">
-    Long-term Research Vision
-  </div>
-
-  <p>
-    Extending relational verification toward
-    trustworthy AI,
-    RAG privacy,
-    and governance-aware AI systems.
-  </p>
-
-</div>
-
+        <h3>
+          ABZ 2026
+        </h3>
+        <div class="small">
+          Accepted · Springer LNCS
         </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- RESEARCH -->
-  <section class="section" id="research-ko">
-
-    <div class="container section-grid">
-
-      <div class="card section-card">
-
-        <h2>연구 관심</h2>
-
         <p>
-
-          저의 연구는
-          데이터 기반 시스템에서의
+          Alloy 기반 형식 검증을 사용하여
+          프라이버시를 관계적 도달 가능성으로 정식화합니다.
+          이 연구는 개인정보 유출을
+          데이터 변환과 추론 관계 위의
+          도달 가능성 문제로 다루기 위한
+          기초를 제공합니다.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          ICFEM 2026 Submission
+        </h3>
+        <div class="small">
+          Submitted · Question-Driven Utility Verification
+        </div>
+        <p>
+          유용성 검증을
+          분석 과제 기반의 관계적 구별 가능성으로 정식화합니다.
+          이 논문은 utility requirement,
+          preservation,
+          utility counterexample,
+          usefulness를 정의하고,
+          bounded relational search를 통해
+          유용성 손실의 구체적 증인을 찾습니다.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          JISA Extension
+        </h3>
+        <div class="small">
+          In Preparation
+        </div>
+        <p>
+          관계적 프라이버시와 유용성 검증을 통합하여
+          privacy-utility trade-off와
+          Pareto Cliff 현상을 분석하는
+          하나의 형식적 프레임워크로 확장합니다.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          Ph.D. Thesis
+        </h3>
+        <div class="small">
+          Ongoing Research Program
+        </div>
+        <p>
+          데이터 기반 시스템과 AI 시스템을 대상으로
           프라이버시,
           유용성,
-          거버넌스를 위한
-          형식적 토대를 구축하는 것을 목표로 합니다.
-
+          거버넌스 지향 검증을 통합하는
+          관계적 형식 검증 프레임워크를 구축합니다.
         </p>
-
-        <p>
-
-          저는 프라이버시를
-          단순한 통계적 masking이 아니라,
-          데이터 변환과 추론 과정을 통해
-          식별 가능한 상태가
-          도달 가능한지 여부라는
-          구조적 속성으로 바라봅니다.
-
-        </p>
-
-        <p>
-
-          이러한 관점은
-          시스템 배포 이전 단계에서
-          disclosure risk를 검증 가능하게 하며,
-          단순 경험적 접근을 넘어서는
-          논리적 보증을 제공합니다.
-
-        </p>
-
       </div>
-
-      <div class="card section-card">
-
-        <h2>방법론</h2>
-
+      <div class="timeline-item">
+        <h3>
+          Future Directions
+        </h3>
+        <div class="small">
+          Long-term Research Vision
+        </div>
         <p>
-
-          저는 Alloy와 관계 논리를 사용하여
-          데이터 변환,
-          공격자 가정,
-          유용성 제약,
-          시스템 상호작용을
-          형식적으로 모델링합니다.
-
+          관계적 형식 검증을
+          trustworthy AI,
+          LLM/RAG 프라이버시,
+          거버넌스 지향 AI 시스템으로 확장합니다.
         </p>
-
-        <p>
-
-          비식별화 변환과
-          재식별 관계를 조합하여,
-          개인정보 유출이
-          논리적으로 도달 가능한지를 검증합니다.
-
-        </p>
-
-        <p>
-          최근 연구에서는 다음 개념들을 제안하고 있습니다:
-        </p>
-
-        <ul>
-
-          <li>
-            유용성 = meaningful distinguishability
-          </li>
-
-          <li>
-            AssumptionSpec vs AttackerContract 분리
-          </li>
-
-          <li>
-            Pareto Cliff = 구조적 불가능성
-          </li>
-
-          <li>
-            Governance-aware verification
-          </li>
-
-        </ul>
-
       </div>
-
-    </div>
-
-  </section>
-<!-- EDUCATION -->
-<section class="section" id="education-ko">
-  <div class="container">
-    <div class="card section-card">
-
-      <h2>학력</h2>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-          <div class="small">
-            2023년 3월 – 현재 · 2026년 9월 졸업 예정 · 융합과학 / 정보과학
-          </div>
-          <p>
-            데이터 및 AI 시스템에서의 프라이버시, 유용성, 거버넌스를 위한 관계적 형식 검증을 연구하고 있습니다.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-          <div class="small">
-            2020년 4월 – 2023년 2월 · 융합과학 / 정보과학
-          </div>
-          <p>
-            형식기법, 모델 체킹, 정보과학을 중심으로 연구했습니다.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>M.Div. — Biola University</h3>
-          <div class="small">
-            2012년 6월 – 2018년 5월 · 미국 캘리포니아 La Mirada · Intercultural Studies
-          </div>
-          <p>
-              Graduate-level study in intercultural studies and multicultural education.
-          </p>
-        </div>
-
-      </div>
-
     </div>
   </div>
-</section>
+</div>
+  </section>
+  <!-- RESEARCH -->
+  <section class="section" id="research-ko">
+<div class="container section-grid">
+  <div class="card section-card">
+    <h2>연구 관심</h2>
+    <p>
+      저의 연구는
+      데이터 기반 시스템과 AI 시스템에서의
+      프라이버시,
+      유용성,
+      거버넌스를 위한
+      형식적 토대를 구축하는 것을 목표로 합니다.
+    </p>
+    <p>
+      저는 프라이버시를
+      단순한 통계적 masking이 아니라,
+      데이터 변환,
+      추론,
+      상호작용을 통해
+      식별 가능한 상태가 도달 가능한지 여부라는
+      시스템의 구조적 속성으로 바라봅니다.
+    </p>
+    <p>
+      동시에 유용성을 관계적 속성으로 다룹니다.
+      즉, 특정 분석 과제가 요구하는 구별이
+      데이터 변환 이후에도 보존되는지를 검증합니다.
+      이를 통해 유용성 손실을
+      단순한 평균 점수 저하가 아니라
+      counterexample로 관찰할 수 있게 됩니다.
+    </p>
+    <p>
+      이러한 관점은
+      시스템 배포 이전 단계에서
+      disclosure risk,
+      utility loss,
+      governance constraint를 검증 가능하게 하며,
+      단순 경험적 접근을 넘어서는
+      논리적 보증을 제공합니다.
+    </p>
+  </div>
+  <div class="card section-card">
+    <h2>방법론</h2>
+    <p>
+      저는 Alloy와 관계 논리를 사용하여
+      데이터 변환,
+      공격자 가정,
+      유용성 요구사항,
+      시스템 상호작용을
+      형식적으로 모델링합니다.
+    </p>
+    <p>
+      비식별화 변환과
+      추론 관계를 조합하여
+      개인정보 유출이 논리적으로 도달 가능한지를 검증합니다.
+      또한 변환된 레코드들을
+      분석 과제별 유용성 요구사항과 비교하여,
+      의미 있는 구별이 보존되는지를 검증합니다.
+    </p>
+    <p>
+      최근 연구에서는 다음 개념들을 제안하고 있습니다:
+    </p>
+    <ul>
+      <li>
+        유용성 = 분석 과제 기반 관계적 구별 가능성
+      </li>
+      <li>
+        Utility counterexample = 유용성 손실의 증인
+      </li>
+      <li>
+        Alloy를 이용한 bounded relational search
+      </li>
+      <li>
+        AssumptionSpec vs AttackerContract 분리
+      </li>
+      <li>
+        Pareto Cliff = 구조적 충돌
+      </li>
+      <li>
+        Governance-aware verification
+      </li>
+    </ul>
+  </div>
+</div>
+  </section>
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications-ko">
+<div class="container">
+  <div class="card section-card">
+    <h2>논문 및 원고</h2>
+    <div class="timeline">
+      <div class="pub-item">
+        <h3>
+          Question-Driven Utility Verification via Bounded Relational Search
+        </h3>
+        <div class="small">
+          Submitted to ICFEM 2026
+        </div>
+        <p>
+          이 논문은 유용성을 관계적 구별 가능성으로 정식화합니다.
+          즉, 특정 분석 과제가 요구하는 레코드 쌍들이
+          데이터 변환 이후에도 구별 가능하게 남아 있을 때,
+          변환된 데이터셋이 해당 과제에 대해 유용하다고 봅니다.
+          이 프레임워크는 utility requirement,
+          preservation,
+          utility counterexample,
+          usefulness를 정의하고,
+          Alloy를 사용하여 유용성 손실에 대한
+          bounded counterexample을 찾습니다.
+        </p>
+      </div>
+      <div class="pub-item">
+        <h3>
+          Relational Privacy Verification via Bounded Model Finding
+        </h3>
+        <div class="small">
+          Accepted to ABZ 2026 · Springer LNCS
+        </div>
+        <p>
+          이 연구는 프라이버시를 관계적 도달 가능성으로 정식화하고,
+          Alloy 기반 bounded model finding을 사용하여
+          특정 변환 및 공격자 가정 아래에서
+          identity disclosure가 논리적으로 도달 가능한지를 검증합니다.
+        </p>
+      </div>
+      <div class="pub-item">
+        <h3>
+          Formal Relational Verification for Privacy, Utility, and Governance
+        </h3>
+        <div class="small">
+          In Preparation · Journal Extension
+        </div>
+        <p>
+          이 원고는 관계적 프라이버시 검증을
+          유용성 보존,
+          Pareto Cliff 분석,
+          데이터 기반 및 AI 시스템을 위한
+          거버넌스 지향 추론으로 확장합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+  <!-- EDUCATION -->
+  <section class="section" id="education-ko">
+    <div class="container">
+      <div class="card section-card">
+    <h2>학력</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
+        <div class="small">
+          2023년 4월 – 현재 · 2026년 9월 졸업 예정 · 융합과학 / 정보과학
+        </div>
+        <p>
+          데이터 및 AI 시스템에서의 프라이버시, 유용성, 거버넌스를 위한 관계적 형식 검증을 연구하고 있습니다.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
+        <div class="small">
+          2020년 4월 – 2023년 3월 · 융합과학 / 정보과학
+        </div>
+        <p>
+          형식기법, 모델 체킹, 정보과학을 중심으로 연구했습니다.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.Div. — Biola University</h3>
+        <div class="small">
+          2012년 6월 – 2018년 5월 · 미국 캘리포니아 La Mirada · Intercultural Studies
+        </div>
+        <p>
+          Graduate-level study in intercultural studies and multicultural education.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
 </div>
 <!-- ========================= JAPANESE ========================= -->
-
 <div class="langpage" id="page-ja" data-langpage="ja">
-
   <!-- HERO -->
   <section class="hero">
-
-    <div class="container hero-grid">
-
-      <article class="card hero-card">
-
-        <div class="eyebrow">
-          JAIST 博士後期課程
-        </div>
-
-        <h1>ヤン・スンイル</h1>
-
-        <p class="subtitle">
-          プライバシー・有用性・AIガバナンスのための
-          関係的形式検証
-        </p>
-
-        <p class="lead">
-
-          私は、
-          関係論理、
-          モデル検査、
-          システムレベル推論を用いて、
-          プライバシー漏えい、
-          有用性保存、
-          ガバナンス制約が
-          システム公開前に
-          どのように検証可能かを研究しています。
-
-        </p>
-
-        <p class="sublead">
-
-          現在の研究では、
-          プライバシーを
-          relational reachability
-          （関係的到達可能性）として、
-          有用性を
-          meaningful distinguishability
-          （意味的区別可能性）として定式化し、
-          両者の構造的衝突を
-          形式的に分析することを目指しています。
-
-        </p>
-
-        <div class="pill-row">
-
-          <span class="pill">
-            Relational Privacy
-          </span>
-
-          <span class="pill">
-            Utility Verification
-          </span>
-
-          <span class="pill">
-            Pareto Cliff
-          </span>
-
-          <span class="pill">
-            Formal Verification
-          </span>
-
-          <span class="pill">
-            AI Governance
-          </span>
-
-          <span class="pill">
-            LLM / RAG Privacy
-          </span>
-
-          <span class="pill">
-            Alloy / Model Checking
-          </span>
-
-        </div>
-
-        <div class="cta-row">
-
-          <a class="btn primary" href="#publications-ja">
-            論文を見る
-          </a>
-
-          <a class="btn" href="#program-ja">
-            研究ロードマップ
-          </a>
-
-          <a class="btn" href="#contact-ja">
-            連絡する
-          </a>
-
-        </div>
-
-      </article>
-
-      <div class="side-stack">
-
-        <!-- CURRENT POSITION -->
-        <aside class="card side-card">
-
-          <h3>現在の所属</h3>
-
-          <div class="meta-list">
-
-            <div>
-
-              <div class="meta-label">
-                所属機関
-              </div>
-
-              <div>
-                Japan Advanced Institute of Science and Technology (JAIST)
-              </div>
-
-            </div>
-
-            <div>
-
-              <div class="meta-label">
-                研究科
-              </div>
-
-              <div>
-                Graduate School of Advanced Science and Technology
-              </div>
-
-            </div>
-
-            <div>
-
-              <div class="meta-label">
-                研究分野
-              </div>
-
-              <div>
-                形式手法 · プライバシー · AIガバナンス
-              </div>
-
-            </div>
-
-            <div>
-
-              <div class="meta-label">
-                指導教員
-              </div>
-
-              <div>
-                青木 利晃 教授
-              </div>
-
-            </div>
-
-          </div>
-
-        </aside>
-
-        <!-- PROFILES -->
-        <aside class="card side-card">
-
-          <h3>プロフィール</h3>
-
-          <div class="link-list">
-
-            <a
-              class="link-chip"
-              href="mailto:s2360003@jaist.ac.jp"
-            >
-              Email
-            </a>
-
-            <a
-              class="link-chip"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Google Scholar
-            </a>
-
-            <a
-              class="link-chip"
-              href="https://orcid.org/0009-0003-8389-2154"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ORCID
-            </a>
-
-            <a
-              class="link-chip"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </aside>
-
-        <!-- RESEARCH STATEMENT -->
-        <aside class="card side-card">
-
-          <h3>研究ステートメント</h3>
-
-          <p class="small" style="margin:0;">
-
-            プライバシーとは、
-            単なるデータの隠蔽ではない。
-
-            それは、
-            変換、
-            推論、
-            システム相互作用を通じて、
-            識別可能状態へ到達することを
-            防ぐことである。
-
-          </p>
-
-        </aside>
-
-      </div>
-
+<div class="container hero-grid">
+  <article class="card hero-card">
+    <div class="eyebrow">
+      JAIST 博士後期課程
     </div>
-
+    <h1>ヤン・スンイル</h1>
+    <p class="subtitle">
+      プライバシー・有用性・AIガバナンスのための
+      関係的形式検証
+    </p>
+    <p class="lead">
+      私は、
+      関係論理、
+      モデル検査、
+      システムレベル推論を用いて、
+      プライバシー漏えい、
+      有用性保存、
+      ガバナンス制約が
+      システム公開前に
+      どのように検証可能かを研究しています。
+    </p>
+    <p class="sublead">
+      現在の研究では、
+      <strong>問いに基づく有用性検証</strong>
+      に焦点を当てています。
+      ここで有用性とは、
+      特定の分析タスクが要求する
+      関係的区別可能性
+      （relational distinguishability）
+      がデータ変換後にも保存されることとして定式化されます。
+      この研究は、関係的プライバシー研究を
+      データ駆動型システム、LLM、RAGシステムにおける
+      ガバナンス指向の形式検証へ拡張するための
+      接続点となるものです。
+    </p>
+    <div class="pill-row">
+      <span class="pill">
+        Relational Privacy
+      </span>
+      <span class="pill">
+        Question-Driven Utility Verification
+      </span>
+      <span class="pill">
+        Relational Distinguishability
+      </span>
+      <span class="pill">
+        Pareto Cliff
+      </span>
+      <span class="pill">
+        AI Governance
+      </span>
+      <span class="pill">
+        LLM / RAG Privacy
+      </span>
+      <span class="pill">
+        Alloy / Model Checking
+      </span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#publications-ja">
+        論文を見る
+      </a>
+      <a class="btn" href="#program-ja">
+        研究ロードマップ
+      </a>
+      <a class="btn" href="mailto:s2360003@jaist.ac.jp">
+        連絡する
+      </a>
+    </div>
+  </article>
+  <div class="side-stack">
+    <!-- CURRENT POSITION -->
+    <aside class="card side-card">
+      <h3>現在の所属</h3>
+      <div class="meta-list">
+        <div>
+          <div class="meta-label">
+            所属機関
+          </div>
+          <div>
+            Japan Advanced Institute of Science and Technology (JAIST)
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            研究科
+          </div>
+          <div>
+            Graduate School of Advanced Science and Technology
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            研究分野
+          </div>
+          <div>
+            形式手法 · プライバシー · 有用性 · AIガバナンス
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">
+            指導教員
+          </div>
+          <div>
+            青木 利晃 教授
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- PROFILES -->
+    <aside class="card side-card">
+      <h3>プロフィール</h3>
+      <div class="link-list">
+        <a
+          class="link-chip"
+          href="mailto:s2360003@jaist.ac.jp"
+        >
+          Email
+        </a>
+        <a
+          class="link-chip"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Scholar
+        </a>
+        <a
+          class="link-chip"
+          href="https://orcid.org/0009-0003-8389-2154"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ORCID
+        </a>
+        <a
+          class="link-chip"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+    </aside>
+    <!-- RESEARCH STATEMENT -->
+    <aside class="card side-card">
+      <h3>研究ステートメント</h3>
+      <p class="small" style="margin:0;">
+        プライバシーとは、
+        単なるデータの隠蔽ではない。
+        それは、
+        変換、
+        推論、
+        システム相互作用を通じて、
+        識別可能状態へ到達することを
+        防ぐことである。
+      </p>
+    </aside>
+  </div>
+</div>
   </section>
-
   <!-- ABOUT -->
   <section class="section" id="about-ja">
-
-    <div class="container section-grid">
-
-      <div class="card section-card">
-
-        <h2>概要</h2>
-
-        <p>
-
-          私はJAIST博士後期課程に所属し、
-          <strong>Relational Privacy</strong>
-          という研究方向のもとで、
-          プライバシー、
-          有用性、
-          ガバナンスを
-          関係的形式検証によって研究しています。
-
-        </p>
-
-        <p>
-
-          私の研究は、
+<div class="container section-grid">
+  <div class="card section-card">
+    <h2>概要</h2>
+    <p>
+      私はJAIST博士後期課程に所属し、
+      プライバシー、
+      有用性、
+      AIガバナンスのための
+      <strong>関係的形式検証</strong>
+      を研究しています。
+      私の研究は、データ駆動型システムにおいて
+      情報漏えい、
+      分析的有用性、
+      ガバナンス制約が
+      どのように相互作用するかを分析するための
+      関係的モデルを構築することを目的としています。
+    </p>
+    <p>
+      初期の研究では、
+      個人情報漏えいを
+      データ変換、
+      攻撃者推論、
+      システム相互作用の上での
+      到達可能性問題としてモデル化しました。
+      この観点では、プライバシーを
+      特定の仮定のもとで識別可能状態が
+      論理的に到達可能かどうかという
+      構造的性質として捉えます。
+    </p>
+    <p>
+      現在の研究では、この流れを
+      有用性検証へ拡張しています。
+      有用性を曖昧な総合スコアとして扱うのではなく、
+      特定の分析タスクが要求する
+      関係的区別可能性が保存されるかどうかとして
+      定式化します。
+      これにより、privacy-utility trade-off と
+      Pareto Cliff 現象を形式的に分析することができます。
+    </p>
+    <p>
+      長期的には、この枠組みを
+      LLMおよびRAGシステムへ拡張することを目指しています。
+      これらのシステムでは、
+      retrieval、
+      memory、
+      external knowledge、
+      generation の相互作用を通じて
+      新しい disclosure path が生じる可能性があります。
+    </p>
+  </div>
+  <div class="card section-card">
+    <h2>研究軸</h2>
+    <div class="focus-grid">
+      <div class="focus-item">
+        <h3>
+          Relational Privacy
+        </h3>
+        <p class="small">
           データ変換、
-          攻撃者推論、
-          システム相互作用によって、
-          個人情報漏えいが
-          どのように発生可能かを、
-          関係的到達可能性問題として
-          モデル化します。
-
+          推論関係、
+          システム相互作用を横断する
+          関係的到達可能性として
+          プライバシーを定義します。
         </p>
-
-        <p>
-
-          最近では、
-          この枠組みを
-          LLMおよびRAGシステムへ拡張し、
-          retrieval、
-          memory、
-          external knowledge、
-          generation の相互作用から生じる
-          新しい disclosure path を研究しています。
-
+      </div>
+      <div class="focus-item">
+        <h3>
+          Utility Verification
+        </h3>
+        <p class="small">
+          特定の分析タスクが要求する
+          意味のある区別可能性の保存を
+          有用性として定義します。
         </p>
-
       </div>
-
-      <div class="card section-card">
-
-        <h2>研究軸</h2>
-
-        <div class="focus-grid">
-
-          <div class="focus-item">
-
-            <h3>
-              Relational Privacy
-            </h3>
-
-            <p class="small">
-
-              データ変換と推論過程における
-              関係的到達可能性として
-              プライバシーを定義します。
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              Utility Verification
-            </h3>
-
-            <p class="small">
-
-              意味的区別可能性の保存を
-              有用性として定義します。
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              AI Governance
-            </h3>
-
-            <p class="small">
-
-              ガバナンスおよび
-              disclosure 制約を
-              形式的に検証します。
-
-            </p>
-
-          </div>
-
-          <div class="focus-item">
-
-            <h3>
-              LLM / RAG Systems
-            </h3>
-
-            <p class="small">
-
-              検索、
-              生成、
-              メモリ、
-              文脈相互作用に対する
-              compositional privacy analysis
-              を研究します。
-
-            </p>
-
-          </div>
-
-        </div>
-
+      <div class="focus-item">
+        <h3>
+          AI Governance
+        </h3>
+        <p class="small">
+          disclosure、
+          compliance、
+          accountability、
+          システムレベル制約のための
+          ガバナンス指向の形式検証を研究します。
+        </p>
       </div>
-
+      <div class="focus-item">
+        <h3>
+          LLM / RAG Systems
+        </h3>
+        <p class="small">
+          検索、
+          生成、
+          メモリ、
+          文脈相互作用に対する
+          compositional privacy analysis
+          を研究します。
+        </p>
+      </div>
     </div>
-
+  </div>
+</div>
   </section>
-
   <!-- RESEARCH PROGRAM -->
   <section class="section" id="program-ja">
-
-    <div class="container">
-
-      <div class="card section-card">
-
-        <h2>研究ロードマップ</h2>
-
-        <div class="timeline">
-
-        <div class="timeline-item">
-
-  <h3>
-
-    ABZ 2026
-
-  </h3>
-
-  <div class="small">
-
-    Accepted · Springer LNCS
-
-  </div>
-
-  <p>
-
-    Establishes privacy as relational reachability
-
-    using Alloy-based formal verification.
-
-  </p>
-
-</div>
-         <div class="timeline-item">
-
-  <h3>
-    JISA Extension
-  </h3>
-
-  <div class="small">
-    In Preparation
-  </div>
-
-  <p>
-    Extends relational privacy toward utility
-    verification through meaningful distinguishability
-    and Pareto Cliff analysis.
-  </p>
-
-</div>
-         <div class="timeline-item">
-
-  <h3>
-    Ph.D. Thesis
-  </h3>
-
-  <div class="small">
-    Ongoing Research Program
-  </div>
-
-  <p>
-    Integrates privacy, utility,
-    and governance-aware verification
-    into a unified relational framework.
-  </p>
-
-</div>
-
-         <div class="timeline-item">
-
-  <h3>
-    AIME 2027
-  </h3>
-
-  <div class="small">
-    Planned Validation Study
-  </div>
-
-  <p>
-    Empirical validation of Pareto Cliff
-    phenomena using real-world
-    clinical and healthcare datasets.
-  </p>
-
-</div>
-        <div class="timeline-item">
-
-  <h3>
-    Future Directions
-  </h3>
-
-  <div class="small">
-    Long-term Research Vision
-  </div>
-
-  <p>
-    Extending relational verification toward
-    trustworthy AI,
-    RAG privacy,
-    and governance-aware AI systems.
-  </p>
-
-</div>
-
+<div class="container">
+  <div class="card section-card">
+    <h2>研究ロードマップ</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>
+          ABZ 2026
+        </h3>
+        <div class="small">
+          Accepted · Springer LNCS
         </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- RESEARCH -->
-  <section class="section" id="research-ja">
-
-    <div class="container section-grid">
-
-      <div class="card section-card">
-
-        <h2>研究関心</h2>
-
         <p>
-
-          私の研究は、
-          データ駆動型システムにおける
+          Alloyに基づく形式検証を用いて、
+          プライバシーを関係的到達可能性として定式化します。
+          この研究は、個人情報漏えいを
+          データ変換と推論関係の上での
+          到達可能性問題として扱うための
+          基盤を提供します。
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          ICFEM 2026 Submission
+        </h3>
+        <div class="small">
+          Submitted · Question-Driven Utility Verification
+        </div>
+        <p>
+          有用性検証を、
+          分析タスクに基づく関係的区別可能性として
+          定式化します。
+          本論文では、
+          utility requirement、
+          preservation、
+          utility counterexample、
+          usefulness を定義し、
+          bounded relational search によって
+          有用性損失の具体的な証人を探索します。
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          JISA Extension
+        </h3>
+        <div class="small">
+          In Preparation
+        </div>
+        <p>
+          関係的プライバシーと有用性検証を統合し、
+          privacy-utility trade-off と
+          Pareto Cliff 現象を分析するための
+          形式的フレームワークへ拡張します。
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>
+          Ph.D. Thesis
+        </h3>
+        <div class="small">
+          Ongoing Research Program
+        </div>
+        <p>
+          データ駆動型システムおよびAIシステムを対象に、
           プライバシー、
           有用性、
-          ガバナンスのための
-          形式的基盤を構築することを目的としています。
-
+          ガバナンス指向の検証を統合する
+          関係的形式検証フレームワークを構築します。
         </p>
-
-        <p>
-
-          私はプライバシーを、
-          単なる統計的 masking としてではなく、
-          データ変換および推論過程を通じて、
-          識別可能状態へ到達できるかどうかという
-          構造的性質として捉えています。
-
-        </p>
-
-        <p>
-
-          この観点により、
-          システム公開前に
-          disclosure risk を検証可能にし、
-          単なる経験的評価を超えた
-          論理的保証を提供します。
-
-        </p>
-
       </div>
-
-      <div class="card section-card">
-
-        <h2>方法論</h2>
-
+      <div class="timeline-item">
+        <h3>
+          Future Directions
+        </h3>
+        <div class="small">
+          Long-term Research Vision
+        </div>
         <p>
-
-          Alloy と関係論理を用いて、
-          データ変換、
-          攻撃者仮定、
-          utility constraints、
-          システム相互作用を
-          形式的にモデル化します。
-
+          関係的形式検証を
+          trustworthy AI、
+          LLM/RAGプライバシー、
+          ガバナンス指向AIシステムへ拡張します。
         </p>
-
-        <p>
-
-          非識別化変換と
-          再識別関係を組み合わせることで、
-          個人情報漏えいが
-          論理的に到達可能かどうかを
-          検証します。
-
-        </p>
-
-        <p>
-          最近の研究では、
-          以下の概念を提案しています。
-        </p>
-
-        <ul>
-
-          <li>
-            Utility = meaningful distinguishability
-          </li>
-
-          <li>
-            AssumptionSpec と AttackerContract の分離
-          </li>
-
-          <li>
-            Pareto Cliff = structural impossibility
-          </li>
-
-          <li>
-            Governance-aware verification
-          </li>
-
-        </ul>
-
       </div>
-
-    </div>
-
-  </section>
-<!-- EDUCATION -->
-<section class="section" id="education-ja">
-  <div class="container">
-    <div class="card section-card">
-
-      <h2>学歴</h2>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-          <div class="small">
-            2023年3月 – 現在 · 2026年9月修了予定 · 融合科学 / 情報科学
-          </div>
-          <p>
-            データおよびAIシステムにおけるプライバシー・有用性・ガバナンスのための関係的形式検証を研究しています。
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
-          <div class="small">
-            2020年4月 – 2023年2月 · 融合科学 / 情報科学
-          </div>
-          <p>
-            形式手法、モデル検査、情報科学を中心に研究しました。
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>M.Div. — Biola University</h3>
-          <div class="small">
-            2012年6月 – 2018年5月 · La Mirada, California, USA · Intercultural Studies
-          </div>
-          <p>
-            異文化研究および多文化教育学を中心とした大学院課程を修了しました。
-          </p>
-        </div>
-
-      </div>
-
     </div>
   </div>
-</section>
+</div>
+  </section>
+  <!-- RESEARCH -->
+  <section class="section" id="research-ja">
+<div class="container section-grid">
+  <div class="card section-card">
+    <h2>研究関心</h2>
+    <p>
+      私の研究は、
+      データ駆動型システムおよびAIシステムにおける
+      プライバシー、
+      有用性、
+      ガバナンスのための
+      形式的基盤を構築することを目的としています。
+    </p>
+    <p>
+      私はプライバシーを、
+      単なる統計的 masking としてではなく、
+      データ変換、
+      推論、
+      相互作用を通じて
+      識別可能状態へ到達できるかどうかという
+      システムの構造的性質として捉えています。
+    </p>
+    <p>
+      同時に、有用性を関係的性質として扱います。
+      すなわち、特定の分析タスクが要求する区別が
+      データ変換後にも保存されているかを検証します。
+      これにより、有用性損失を
+      単なる平均的なスコア低下ではなく、
+      counterexample として観察可能にします。
+    </p>
+    <p>
+      この観点により、
+      システム公開前に
+      disclosure risk、
+      utility loss、
+      governance constraint を検証可能にし、
+      単なる経験的評価を超えた
+      論理的保証を提供します。
+    </p>
+  </div>
+  <div class="card section-card">
+    <h2>方法論</h2>
+    <p>
+      Alloy と関係論理を用いて、
+      データ変換、
+      攻撃者仮定、
+      有用性要求、
+      システム相互作用を
+      形式的にモデル化します。
+    </p>
+    <p>
+      非識別化変換と
+      推論関係を組み合わせることで、
+      個人情報漏えいが
+      論理的に到達可能かどうかを検証します。
+      また、変換後のレコードを
+      分析タスクごとの有用性要求と比較し、
+      意味のある区別が保存されているかを検証します。
+    </p>
+    <p>
+      最近の研究では、以下の概念を提案しています。
+    </p>
+    <ul>
+      <li>
+        有用性 = 分析タスクに基づく関係的区別可能性
+      </li>
+      <li>
+        Utility counterexample = 有用性損失の証人
+      </li>
+      <li>
+        Alloyを用いた bounded relational search
+      </li>
+      <li>
+        AssumptionSpec と AttackerContract の分離
+      </li>
+      <li>
+        Pareto Cliff = 構造的衝突
+      </li>
+      <li>
+        Governance-aware verification
+      </li>
+    </ul>
+  </div>
+</div>
+  </section>
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications-ja">
+<div class="container">
+  <div class="card section-card">
+    <h2>論文・原稿</h2>
+    <div class="timeline">
+      <div class="pub-item">
+        <h3>
+          Question-Driven Utility Verification via Bounded Relational Search
+        </h3>
+        <div class="small">
+          Submitted to ICFEM 2026
+        </div>
+        <p>
+          本論文では、有用性を関係的区別可能性として定式化します。
+          すなわち、特定の分析タスクが要求するレコードペアが
+          データ変換後にも区別可能であるとき、
+          変換後のデータセットはそのタスクに対して
+          有用であるとみなします。
+          このフレームワークは、
+          utility requirement、
+          preservation、
+          utility counterexample、
+          usefulness を定義し、
+          Alloyを用いて有用性損失に対する
+          bounded counterexample を探索します。
+        </p>
+      </div>
+      <div class="pub-item">
+        <h3>
+          Relational Privacy Verification via Bounded Model Finding
+        </h3>
+        <div class="small">
+          Accepted to ABZ 2026 · Springer LNCS
+        </div>
+        <p>
+          本研究では、プライバシーを関係的到達可能性として定式化し、
+          Alloyに基づく bounded model finding を用いて、
+          特定の変換および攻撃者仮定のもとで
+          identity disclosure が論理的に到達可能かどうかを検証します。
+        </p>
+      </div>
+      <div class="pub-item">
+        <h3>
+          Formal Relational Verification for Privacy, Utility, and Governance
+        </h3>
+        <div class="small">
+          In Preparation · Journal Extension
+        </div>
+        <p>
+          本原稿では、関係的プライバシー検証を
+          有用性保存、
+          Pareto Cliff 分析、
+          データ駆動型およびAIシステムのための
+          ガバナンス指向推論へ拡張します。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+  <!-- EDUCATION -->
+  <section class="section" id="education-ja">
+    <div class="container">
+      <div class="card section-card">
+    <h2>学歴</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Ph.D. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
+        <div class="small">
+          2023年4月 – 現在 · 2026年9月修了予定 · 融合科学 / 情報科学
+        </div>
+        <p>
+          データおよびAIシステムにおけるプライバシー・有用性・ガバナンスのための関係的形式検証を研究しています。
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.S. — Japan Advanced Institute of Science and Technology (JAIST)</h3>
+        <div class="small">
+          2020年4月 – 2023年3月 · 融合科学 / 情報科学
+        </div>
+        <p>
+          形式手法、モデル検査、情報科学を中心に研究しました。
+        </p>
+      </div>
+      <div class="timeline-item">
+        <h3>M.Div. — Biola University</h3>
+        <div class="small">
+          2012年6月 – 2018年5月 · La Mirada, California, USA · Intercultural Studies
+        </div>
+        <p>
+          異文化研究および多文化教育学を中心とした大学院課程を修了しました。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
 </div>
 
   
-  </main>
-
+</main>
   <footer>
-    <div class="container">© <span id="year"></span> Seungil Yang · Privacy is not just data protection — it is preventing reachability.</div>
+    <div class="container">
+      © <span id="year"></span> Seungil Yang · Formal relational verification for privacy, utility, and AI governance.
+    </div>
   </footer>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const tabBtns = Array.from(document.querySelectorAll('.tabbtn'));
@@ -2266,21 +1945,28 @@
       tabBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
       pages.forEach(p => p.classList.toggle('active', p.dataset.langpage === lang));
       document.documentElement.lang = lang;
-      try { localStorage.setItem('preferredLang', lang); } catch(e) {}
+      try {
+        localStorage.setItem('preferredLang', lang);
+      } catch (e) {}
       const url = new URL(window.location.href);
       url.searchParams.set('lang', lang);
       window.history.replaceState({}, '', url.toString());
     }
-    tabBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    tabBtns.forEach(btn =>
+      btn.addEventListener('click', () => setLang(btn.dataset.lang))
+    );
     (function initLang() {
       const url = new URL(window.location.href);
       let lang = url.searchParams.get('lang');
       if (!lang) {
-        try { lang = localStorage.getItem('preferredLang'); } catch (e) {}
+        try {
+          lang = localStorage.getItem('preferredLang');
+        } catch (e) {}
       }
-      if (!['ko', 'ja', 'en'].includes(lang)) lang = 'en';
+      if (!['ko', 'ja', 'en'].includes(lang)) {
+        lang = 'en';
+      }
       setLang(lang);
     })();
   </script>
-
 </html>
