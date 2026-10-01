@@ -20,4 +20,4 @@ The UCI Adult training file `adult.data` (https://archive.ics.uci.edu/dataset/2/
 
 Download `artifact.zip` and unzip it. Each subfolder's README lists its exact commands.
 
-SHA-256 of `artifact.zip`: 7920a99df05a248801b4a6f51e3f65a638bc32b0c58027576dab6dfc854889f1
+SHA-256 of `artifact.zip`: 7332b5c2ff6ab8f932f8a7ef90f077aa80f5d76f94ec40648f5d2dc1ce746714
